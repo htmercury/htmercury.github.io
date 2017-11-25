@@ -505,6 +505,9 @@ a.source:hover {
     color: white;
     background: #7f4c41;
 }
+    #about > div > div {
+        text-align: center;
+    }
 
     #about > div > div > p {
         color: #fbcfc6;
@@ -516,13 +519,14 @@ a.source:hover {
     }
 
         #about > div > div > ul > li {
-            min-width: 160px;
-            max-width: 25%;
+            display: inline;
             font-size: 1.1em;
         }
 
             #about > div > div > ul > li > a {
-                padding: 8px 0 8px 0;
+                display: inline;
+                padding: 12px;
+                margin-right: 12px;
             }
 
     #about > p {
