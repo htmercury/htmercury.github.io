@@ -1,6 +1,7 @@
 // Check screen width immediately
 if ($(window).width() < 1000) {
-  $("#scrollbar").css("display", "none");
+    $("#scrollbar").css("display", "none");
+    $("#about > div > div > ul > li > a").css("display", "inline-block");
 }
 
 $(document).ready(function() {
@@ -47,13 +48,16 @@ var typed = new Typed(".typed", options);
     if ($(window).width() < 1500) {
       if (!$("#sidebar").hasClass("active"))
         $("#sidebarCollapse").trigger("click");
-      if ($(window).width() < 1000)
-        $("#scrollbar").css("display", "none");
+      if ($(window).width() < 1000) {
+          $("#scrollbar").css("display", "none");
+          $("#about > div > div > ul > li > a").css("display", "inline-block");
+      }
       else
         $("#scrollbar").css("display", "");
       }
     else {
-      $("#scrollbar").css("display", "");
+        $("#scrollbar").css("display", "");
+        $("#about > div > div > ul > li > a").css("display", "inline");
     }
   });
   
