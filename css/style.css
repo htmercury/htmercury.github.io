@@ -1,47 +1,140 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-#skill-list {
-    font-size: 75px;
-    text-align: center;
+/* ---------------------------------------------------
+    PROJECT SECTION
+----------------------------------------------------- */
+
+#project1 {
+    background: url(https://github.com/htmercury/google-homepage/blob/master/google-homepage-screenshot.jpg?raw=true);
+    background-size: cover;
+    background-position: center;
+}
+
+#project2 {
+    background: url(https://github.com/htmercury/FCC-Tribute-Page/blob/master/FCC-Tribute-Page-Screenshot.jpg?raw=true);
+    background-size: cover;
+    background-position: center-top;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+/*SCROLL BAR*/
+#scrollbar {
+    margin-left: 105px;
+    margin-right: 25px;
+    margin-top: 5px;
+    padding-top: 0;
+    padding: 0 !important;
+    transition: all 0.3s;
+}
+
+/*CONTENT*/
+#content {
+    margin-left: 80px;
+    background: lightgrey;
+    padding: 0;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.pages {
+    margin: 0;
+    width: 100%;
+    padding: 6% 10% 0 10%;
+    display: Inline-block;
+    background: lightgrey;
+    position: relative;
+}
+
+/*HOME*/
+#home {
+    width: 100%;
+    padding-top: 20vh;
+    padding-bottom: 75vh;
+    background-image: url("../images/unsplash_homescreen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #f7f7f7 !important;
+}
+
+    #home > h4 {
+        color: white;
+    }
+
+#typed-wrapper {
+    height: 30px;
 }
 
 #status {
     opacity: 0;
 }
 
-/*horizontal line rules*/
-hr {
-    height: 2px;
-    background-color: #555;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 75%;
-}
-
-#contact > p {
-    color: black !important;
-}
-
-#contact-row {
+#shortcut {
     text-align: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    font-size: 50px;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: blink 3.4s infinite;
 }
 
-    #contact-row > li {
-        display: inline-block;
-        width: 50%;
+    #shortcut > a > i:hover {
+        opacity: 0.4;
     }
 
-        #contact-row > li:hover {
-            color: white;
+/*ABOUT*/
+#about {
+    color: white;
+    background: #7f4c41;
+}
+    #about > p {
+        color: #fbcfc6;
+    }
+
+        #about > div > div {
+            text-align: center;
         }
 
-        #contact-row > li > a > i {
-            margin-top: 5%;
-            font-size: 25px;
-        }
+            #about > div > div > p {
+                color: #fbcfc6;
+            }
+
+            #about > div > div > ul {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+                #about > div > div > ul > li {
+                    display: inline;
+                    font-size: 1.1em;
+                }
+
+                    #about > div > div > ul > li > a {
+                        display: inline;
+                        padding: 12px;
+                        margin-right: 12px;
+                    }
+
+#skill-list {
+    font-size: 75px;
+    text-align: center;
+}
+
+/*PORTFOLIO*/
+#portfolio {
+    color: #7f4c41;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+    #portfolio > p {
+        color: #945d52;
+    }
 
 #portfolio-btn-container {
     text-align: center;
@@ -66,18 +159,6 @@ hr {
     #portfolio-btn:focus {
         outline: none;
     }
-
-#project1 {
-    background: url(https://github.com/htmercury/google-homepage/blob/master/google-homepage-screenshot.jpg?raw=true);
-    background-size: cover;
-    background-position: center;
-}
-
-#project2 {
-    background: url(https://github.com/htmercury/FCC-Tribute-Page/blob/master/FCC-Tribute-Page-Screenshot.jpg?raw=true);
-    background-size: cover;
-    background-position: center-top;
-}
 
 .project-container {
     height: 300px;
@@ -145,6 +226,32 @@ hr {
 .project-container:hover > .project-desc {
     display: block;
 }
+
+/*CONTACT*/
+#contact > p {
+    color: black !important;
+}
+
+#contact-row {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+    #contact-row > li {
+        display: inline-block;
+        width: 50%;
+    }
+
+        #contact-row > li:hover {
+            color: white;
+        }
+
+        #contact-row > li > a > i {
+            margin-top: 5%;
+            font-size: 25px;
+        }
 
 /* ---------------------------------------------------
     CUSTOM TYPED.JS CURSOR
@@ -221,6 +328,15 @@ p {
     font-weight: 300;
     line-height: 1.7em;
     color: #999;
+}
+
+/*horizontal line rules*/
+hr {
+    height: 2px;
+    background-color: #555;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75%;
 }
 
 a, a:hover, a:focus {
@@ -458,113 +574,6 @@ a.source:hover {
     height: auto;
     width: 95%;
     margin-left: 2%;
-}
-
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
-#content {
-    margin-left: 80px;
-    background: lightgrey;
-    padding: 0;
-    min-height: 100vh;
-    transition: all 0.3s;
-}
-
-#home {
-    width: 100%;
-    padding-top: 20vh;
-    padding-bottom: 75vh;
-    background-image: url("../images/unsplash_homescreen.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #f7f7f7 !important;
-}
-
-    #home > h4 {
-        color: white;
-    }
-
-#typed-wrapper {
-    height: 30px;
-}
-
-#shortcut {
-    text-align: center;
-    font-size: 50px;
-    position: absolute;
-    bottom: 10%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    animation: blink 3.4s infinite;
-}
-
-    #shortcut > a > i:hover {
-        opacity: 0.4;
-    }
-
-#about {
-    color: white;
-    background: #7f4c41;
-}
-    #about > div > div {
-        text-align: center;
-    }
-
-    #about > div > div > p {
-        color: #fbcfc6;
-    }
-
-    #about > div > div > ul {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-        #about > div > div > ul > li {
-            display: inline;
-            font-size: 1.1em;
-        }
-
-            #about > div > div > ul > li > a {
-                display: inline;
-                padding: 12px;
-                margin-right: 12px;
-            }
-
-    #about > p {
-        color: #fbcfc6;
-    }
-
-#portfolio {
-    color: #7f4c41;
-    background: #f7f7f7;
-    text-align: center;
-}
-
-    #portfolio > p {
-        color: #945d52;
-    }
-
-
-
-.pages {
-    margin: 0;
-    width: 100%;
-    padding: 6% 10% 0 10%;
-    display: Inline-block;
-    background: lightgrey;
-    position: relative;
-}
-
-#scrollbar {
-    margin-left: 105px;
-    margin-right: 25px;
-    margin-top: 5px;
-    padding-top: 0;
-    padding: 0 !important;
-    transition: all 0.3s;
 }
 
 /* ---------------------------------------------------
