@@ -486,6 +486,10 @@ a.source:hover {
         color: white;
     }
 
+#typed-wrapper {
+    height: 30px;
+}
+
 #shortcut {
     text-align: center;
     font-size: 50px;
