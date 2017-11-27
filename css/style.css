@@ -92,34 +92,35 @@
     color: white;
     background: #7f4c41;
 }
+
     #about > p {
         color: #fbcfc6;
         text-align: center;
     }
 
-        #about > div > div {
-            text-align: center;
+    #about > div > div {
+        text-align: center;
+    }
+
+        #about > div > div > p {
+            color: #fbcfc6;
         }
 
-            #about > div > div > p {
-                color: #fbcfc6;
+        #about > div > div > ul {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+            #about > div > div > ul > li {
+                display: inline;
+                font-size: 1.1em;
             }
 
-            #about > div > div > ul {
-                padding-left: 0;
-                padding-right: 0;
-            }
-
-                #about > div > div > ul > li {
+                #about > div > div > ul > li > a {
                     display: inline;
-                    font-size: 1.1em;
+                    padding: 12px;
+                    margin-right: 12px;
                 }
-
-                    #about > div > div > ul > li > a {
-                        display: inline;
-                        padding: 12px;
-                        margin-right: 12px;
-                    }
 
 #skill-list {
     font-size: 75px;
