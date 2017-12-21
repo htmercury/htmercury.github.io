@@ -39,6 +39,9 @@
     transition: all 0.3s;
 }
 
+.tab { display:inline-block; 
+    margin-left: 40px; }
+
 .pages {
     margin: 0;
     width: 100%;
@@ -93,6 +96,7 @@
     background: #7f4c41;
 }
     #about > p {
+        text-align: justify;
         color: #fbcfc6;
     }
 
@@ -101,6 +105,7 @@
         }
 
             #about > div > div > p {
+                text-align: justify;
                 color: #fbcfc6;
             }
 
