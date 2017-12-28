@@ -16,6 +16,12 @@
     background-position: center-top;
 }
 
+#project3 {
+    background: url(https://github.com/htmercury/FCC-Random-Quote-Machine/blob/master/FCC-Random-Quote-Machine-Screenshot.png?raw=true);
+    background-size: cover;
+    background-position: center;
+}
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
