@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <title>Personal Portfolio</title>
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
-
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css'>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
     <div class="wrapper container-fluid">
         <!-- Sidebar Holder -->
-        <nav id="sidebar" class="active">
+        <nav id="sidebar" class="active open">
             <div class="sidebar-header">
                 <h3 id="name">Ka Wong</h3>
                 <strong>KW</strong>
@@ -50,19 +48,24 @@
             <nav id="scrollbar" class="navbar navbar-default navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <button type="button" id="sidebarCollapse" class="navbar-btn active">
+                        <button type="button" id="sidebarCollapse" class="toggle-btn navbar-btn active">
                             <span></span>
                             <span></span>
                             <span></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
+                    <div class="navbar-mini">
+                        <button type="button" class="min-btn toggle-btn navbar-btn" onclick="collapseMin()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                        <ul class="nav-link nav navbar-nav navbar-right">
                             <li><a href="https://codepen.io/htmercury/" target="_blank">Codepen <i class="fa fa-codepen"></i></a></li>
                             <li><a href="https://www.freecodecamp.org/htmercury" target="_blank">FCC <i class="fa fa-free-code-camp"></i></a></li>
                             <li><a href="https://github.com/htmercury" target="_blank">Github <i class="fa fa-github"></i></a></li>
                         </ul>
-                    </div>
                 </div>
             </nav>
             <div id="home" class="pages">
@@ -200,11 +203,24 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="unfinished project-container">
-                            <div class="project-desc">
-                                <p class="text-center">Nothing here yet.</p>
-                            </div>
-                        </div>
+                            <div id="project4" class="project-container">
+                                    <div class="project-desc">
+                                        <h3 class="text-center">Weather App</h3>
+                                        <p class="text-center">Free Code Camp (FCC) Front-end Development's third project: A web application that returns the weather of your detected location.</p>
+                                        <div class="project-links">
+                                            <a href="https://codepen.io/htmercury/full/baBPjY/" target="_blank">
+                                                <button type="button" class="btn project-btn">
+                                                    Demo <i class="fa fa-codepen"></i>
+                                                </button>
+                                            </a>
+                                            <a href="https://github.com/htmercury/FCC-Weather-App" target="_blank">
+                                                <button type="button" class="btn project-btn">
+                                                    Code <i class="fa fa-github"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="unfinished project-container">

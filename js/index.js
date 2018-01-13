@@ -1,7 +1,22 @@
 // Check screen width immediately
-if ($(window).width() < 1000) {
-    $("#scrollbar").css("display", "none");
+if ($(window).width() < 1440) {
     $("#about > div > div > ul > li > a").css("display", "inline-block");
+} else {
+  $("#sidebar").toggleClass("active");
+  $("#sidebarCollapse").toggleClass("active");
+  $("#content").css("margin-left", "180px");
+  $("#scrollbar").css("margin-left", "205px");
+}
+
+function collapseMin() {
+  if ($("#sidebar").hasClass("open")) {
+    $("#content").css("margin-left", "80px");
+    $("#scrollbar").css("margin-left", "105px");
+  } else {
+    $("#content").css("margin-left", "0px");
+    $("#scrollbar").css("margin-left", "25px");
+  }
+  $("#sidebar").toggleClass("open");
 }
 
 $(document).ready(function() {
@@ -21,12 +36,12 @@ $(document).ready(function() {
 }
 
 var typed = new Typed(".typed", options);
-  
+
   // When collapse button is clicked
   $("#sidebarCollapse").on("click", function() {
     if ($("#sidebar").hasClass("active")) {
-      $("#content").css("margin-left", "12%");
-      $("#scrollbar").css("margin-left", "14%");
+      $("#content").css("margin-left", "180px");
+      $("#scrollbar").css("margin-left", "205px");
     } else {
       $("#content").css("margin-left", "80px");
       $("#scrollbar").css("margin-left", "105px");
@@ -49,14 +64,10 @@ var typed = new Typed(".typed", options);
       if (!$("#sidebar").hasClass("active"))
         $("#sidebarCollapse").trigger("click");
       if ($(window).width() < 1000) {
-          $("#scrollbar").css("display", "none");
           $("#about > div > div > ul > li > a").css("display", "inline-block");
       }
-      else
-        $("#scrollbar").css("display", "");
       }
     else {
-        $("#scrollbar").css("display", "");
         $("#about > div > div > ul > li > a").css("display", "inline");
     }
   });
