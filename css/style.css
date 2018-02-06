@@ -125,8 +125,10 @@
             text-align: justify;
             color: #fbcfc6;
         }
-        #about > div > div > h2 {
-            margin-top: 0;
+        #about > div > div > img {
+            margin-top: 20px;
+            width: 250px;
+            height: auto;
         }
 
         #about > div > div > ul {
