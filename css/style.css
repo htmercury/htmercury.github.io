@@ -122,15 +122,11 @@
 
         #about > div > div > p {
             color: #fbcfc6;
+            text-align: justify;
+            color: #fbcfc6;
         }
-
-            #about > div > div > p {
-                text-align: justify;
-                color: #fbcfc6;
-            }
-        #about > div > div > img {
-            width: 250px;
-            height: auto;
+        #about > div > div > h2 {
+            margin-top: 0;
         }
 
         #about > div > div > ul {
