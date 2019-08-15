@@ -1,0 +1,47 @@
+.side-bar {
+  padding-top: 24px;
+  padding-bottom: 6px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  width: 260px;
+  z-index: 500;
+}
+
+@media (max-width: 767px) {
+  .side-bar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .side-bar {
+    padding-right: calc(24px + ((8 * (100vw - 320px)) / 1120));
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .side-bar {
+    padding-left: calc(24px + ((8 * (100vw - 320px)) / 1120));
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .side-bar {
+    padding-bottom: calc(6px + ((2 * (100vw - 320px)) / 1120));
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .side-bar {
+    padding-top: calc(24px + ((8 * (100vw - 320px)) / 1120));
+  }
+}

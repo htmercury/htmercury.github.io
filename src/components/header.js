@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import styles from "../styles/header.module.scss";
+
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
     <Link to={props.to}>{props.children}</Link>
@@ -9,7 +11,7 @@ const ListLink = props => (
 )
 
 const Header = ({ siteTitle }) => (
-  <header style={{ marginBottom: `1.5rem` }}>
+  <header className={styles.sideBar}>
     <div
       style={{
         margin: `0 auto`,

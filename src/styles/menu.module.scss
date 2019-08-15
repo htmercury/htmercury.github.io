@@ -1,0 +1,18 @@
+.modal {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  z-index: 300;
+  animation: 0.1s linear 0s 1 normal none running;
+  margin: 0;
+}
