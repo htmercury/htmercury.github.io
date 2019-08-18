@@ -2,34 +2,17 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import Item from "./item"
-import classnames from "classnames"
 
 import styles from "../styles/header.module.scss"
 import logoUrl from "../assets/cubicle.svg"
 
 class Header extends React.Component {
-  constructor() {
-    super(...arguments)
-
-    this.state = {
-      preLoad: true,
-      postLoad: false,
-    }
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({ preLoad: false })
-    }, 50)
-  }
-
   render() {
-    const { siteTitle, location } = this.props
-    const { preLoad, postLoad } = this.state
+    const { location, flicker } = this.props
 
     const routes = [
       { text: "Home", path: "/" },
-      { text: "Technolgies", path: "/technologies/" },
+      { text: "Technologies", path: "/technologies/" },
       { text: "Experience", path: "/experience/" },
       { text: "Portfolio", path: "/portfolio/" },
       { text: "Notes", path: "/notes/" },
@@ -52,12 +35,7 @@ class Header extends React.Component {
           <p>Full-Stack Developer</p>
         </div>
         <div className={styles.navWrapper}>
-          <nav
-            className={classnames(
-              preLoad ? styles.preLoad : null,
-              postLoad ? styles.postLoad : null
-            )}
-          >
+          <nav>
             {routes.map(r => (
               <Item
                 location={location}
@@ -65,6 +43,13 @@ class Header extends React.Component {
                 path={r.path}
                 active={location.pathname === r.path}
                 key={r.path}
+                handler={
+                  r.path !== "/" &&
+                  location.state &&
+                  location.state.prevPath !== location.pathname
+                    ? flicker
+                    : null
+                }
               />
             ))}
           </nav>
@@ -72,7 +57,10 @@ class Header extends React.Component {
         <div className={styles.headerContact}>
           <p>
             For business enquiries or casual chatter—do drop me a line at{" "}
-            <a href="mailto: kawong2020@u.northwestern.edu">kawong2020@u.northwestern.edu</a>.
+            <a href="mailto: kawong2020@u.northwestern.edu">
+              kawong2020@u.northwestern.edu
+            </a>
+            .
           </p>
         </div>
       </header>
@@ -81,12 +69,7 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
   location: PropTypes.object.isRequired,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

@@ -54,22 +54,6 @@
 
   .navbar-contact {
     text-align: right;
-
-    &.pre-load {
-      > a {
-        &[data-active="true"] {
-          span > span {
-            width: 80% !important;
-          }
-        }
-
-        &[data-active="false"][data-prev="true"] {
-          span > span {
-            width: 120% !important;
-          }
-        }
-      }
-    }
   }
 }
 

@@ -33,7 +33,14 @@
       }
 
       span > span {
-        display: none;
+        background: #363f87 !important;
+      }
+
+      &[data-active="true"] {
+        color: black !important;
+        span > span {
+          display: none;
+        }
       }
     }
   }

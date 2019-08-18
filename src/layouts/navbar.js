@@ -16,7 +16,7 @@ class Navbar extends React.Component {
     const { location } = this.props
 
     this.state = {
-      scrollPosition: 0,
+      scrollPosition: window.scrollY,
       menuOpened: false,
       preload: true,
     }
@@ -38,6 +38,10 @@ class Navbar extends React.Component {
     this.setState({
       scrollPosition: window.scrollY,
     })
+  }
+
+  closeMenu = () => {
+    this.setState({ menuOpened: false })
   }
 
   render() {
@@ -67,6 +71,7 @@ class Navbar extends React.Component {
             to="/"
             className={styles.navbarLogo}
             state={{ prevPath: location.pathname }}
+            onClick={this.closeMenu}
           >
             {menuOpened ? (
               <img src={logoUrl} alt="logo" />
@@ -89,7 +94,7 @@ class Navbar extends React.Component {
             />
           </div>
         </div>
-        {menuOpened && <Menu location={location} />}
+        {menuOpened && <Menu location={location} close={this.closeMenu} />}
       </>
     )
   }

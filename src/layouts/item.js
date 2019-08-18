@@ -11,7 +11,6 @@ const Item = ({ text, path, handler, active, location }) =>
       onClick={handler}
       className={classnames(styles.item, active ? styles.linkActive : null)}
       data-active={active}
-      data-prev={location.state ? location.state.prevPath === path : false}
     >
       <span className={styles.text}>
         {text}
@@ -23,7 +22,6 @@ const Item = ({ text, path, handler, active, location }) =>
       onClick={handler}
       className={classnames(styles.item, active ? styles.linkActive : null)}
       data-active={active}
-      data-prev={false}
     >
       <span className={styles.text}>
         {text}

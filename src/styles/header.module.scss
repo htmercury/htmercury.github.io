@@ -60,23 +60,13 @@
 
         &[data-active="true"] {
           span > span {
-            width: 110% !important;
+            width: 100% !important;
           }
         }
-      }
 
-      &.pre-load {
-        > a {
-          &[data-active="true"] {
-            span > span {
-              width: 80% !important;
-            }
-          }
-
-          &[data-active="false"][data-prev="true"] {
-            span > span {
-              width: 110% !important;
-            }
+        &:hover[data-active="false"] {
+          span > span {
+            width: 80% !important;
           }
         }
       }
