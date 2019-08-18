@@ -1,38 +1,55 @@
 @media (min-width: 768px) {
-    .content {
-      margin-left: 260px;
-      min-height: 100vh;
-      padding-bottom: 120px;
-    }
+  .content,
+  .wrapper {
+    margin-left: 260px;
+    min-height: 100vh;
+    padding-bottom: 120px;
   }
-  
-  @media screen and (min-width: 320px) {
-    .content {
-      padding-right: calc(24px + ((8 * (100vw - 320px)) / 1120));
-    }
+}
+
+@media screen and (min-width: 320px) {
+  .content,
+  .wrapper {
+    padding-right: calc(24px + ((8 * (100vw - 320px)) / 1120));
   }
-  
-  @media screen and (min-width: 320px) {
-    .content {
-      padding-left: calc(24px + ((8 * (100vw - 320px)) / 1120));
-    }
+}
+
+@media screen and (min-width: 320px) {
+  .content,
+  .wrapper {
+    padding-left: calc(24px + ((8 * (100vw - 320px)) / 1120));
   }
-  
-  @media screen and (min-width: 320px) {
-    .content {
-      padding-bottom: calc(48px + ((16 * (100vw - 320px)) / 1120));
-    }
+}
+
+@media screen and (min-width: 320px) {
+  .content,
+  .wrapper {
+    padding-bottom: calc(48px + ((16 * (100vw - 320px)) / 1120));
   }
-  
-  .content {
-    padding-bottom: 48px;
-    padding-left: 24px;
-    padding-right: 24px;
-    background-color: rgba(0, 0, 0, 0.173);
-    padding-top: 120px;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center;
-  }
-  
+}
+
+.content {
+  padding-bottom: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.85);
+  min-height: 100vh;
+}
+
+.wrapper {
+  background: rgba(0, 0, 0, 0.85);
+  background: linear-gradient(0, rgba(34, 34, 34, 0.18) 0%, rgba(34, 34, 34, 0.18) 25%,rgba(70, 70, 70, 0.18) 25%, rgba(70, 70, 70, 0.18) 50%,rgba(107, 107, 107, 0.18) 50%, rgba(107, 107, 107, 0.18) 75%,rgba(143, 143, 143, 0.18) 75%, rgba(143, 143, 143, 0.18) 100%),linear-gradient(135deg, rgb(86, 83, 176) 0%, rgb(86, 83, 176) 12.5%,rgb(107, 83, 174) 12.5%, rgb(107, 83, 174) 25%,rgb(128, 82, 173) 25%, rgb(128, 82, 173) 37.5%,rgb(149, 82, 171) 37.5%, rgb(149, 82, 171) 50%,rgb(170, 82, 170) 50%, rgb(170, 82, 170) 62.5%,rgb(191, 82, 168) 62.5%, rgb(191, 82, 168) 75%,rgb(212, 81, 167) 75%, rgb(212, 81, 167) 87.5%,rgb(233, 81, 165) 87.5%, rgb(233, 81, 165) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+}

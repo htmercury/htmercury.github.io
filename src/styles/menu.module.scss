@@ -1,7 +1,7 @@
 .modal {
   -webkit-box-align: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: #e5e5e5;
   bottom: 0px;
   display: flex;
   flex-direction: column;
@@ -14,5 +14,6 @@
   top: 0px;
   z-index: 300;
   animation: 0.1s linear 0s 1 normal none running;
+  transition: transform 0.25s;
   margin: 0;
 }

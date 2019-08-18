@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 import Header from "./header"
 import Navbar from "./navbar"
@@ -22,14 +23,24 @@ const Layout = ({ children }) => {
           title
         }
       }
+      desktop: file(relativePath: { eq: "main-bg.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
+
+  const imageData = data.desktop.childImageSharp.fluid
 
   return (
     <>
       <Navbar />
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className={styles.content}>{children}</main>
+      <div className={styles.wrapper}></div>
       <Footer />
     </>
   )

@@ -5,9 +5,11 @@
   padding-bottom: 48px;
   font-size: 13px;
   line-height: 1.6em;
-  color: rgba(0, 0, 0, 0.486);
   text-align: center;
-  background: rgb(255, 255, 255);
+  background: #151724;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 5;
 }
 
 @media (min-width: 768px) {

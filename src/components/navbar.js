@@ -1,5 +1,5 @@
 import React from "react"
-import classnames from "classnames";
+import classnames from "classnames"
 import styles from "../styles/navbar.module.scss"
 
 import Menu from "./menu"
@@ -31,7 +31,13 @@ class Navbar extends React.Component {
   render() {
     return (
       <>
-        <div className={classnames(styles.navbar, this.state.menuOpened ? styles.shadowNone : null)} data-scroll={this.state.scrollPosition}>
+        <div
+          className={classnames(
+            styles.navbar,
+            this.state.menuOpened ? styles.shadowNone : null
+          )}
+          data-scroll={this.state.scrollPosition}
+        >
           <p
             onClick={() =>
               this.setState({ menuOpened: !this.state.menuOpened })
