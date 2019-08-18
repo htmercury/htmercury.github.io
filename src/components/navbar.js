@@ -13,13 +13,20 @@ class Navbar extends React.Component {
   constructor() {
     super(...arguments)
 
+    const { location } = this.props
+
     this.state = {
       scrollPosition: 0,
       menuOpened: false,
+      preload: true,
     }
   }
 
   componentDidMount() {
+    setTimeout(() => {
+      this.setState({ preload: false })
+    }, 50)
+
     window.addEventListener("scroll", this.listenToScroll)
   }
 
@@ -34,37 +41,55 @@ class Navbar extends React.Component {
   }
 
   render() {
+    const { location } = this.props
+    const { scrollPosition, menuOpened, preload } = this.state
+
+    const isContact = location.pathname === "/contact/"
+
     return (
       <>
         <div
           className={classnames(
             styles.navbar,
-            this.state.menuOpened ? styles.shadowNone : null
+            menuOpened ? styles.shadowNone : null
           )}
-          data-scroll={this.state.scrollPosition}
+          data-scroll={scrollPosition}
         >
           <div>
             <Item
+              location={location}
               text="Menu"
-              handler={() =>
-                this.setState({ menuOpened: !this.state.menuOpened })
-              }
-              active={this.state.menuOpened}
+              handler={() => this.setState({ menuOpened: !menuOpened })}
+              active={menuOpened}
             />
           </div>
-          <Link to="/" className={styles.navbarLogo}>
-            {this.state.menuOpened ? (
+          <Link
+            to="/"
+            className={styles.navbarLogo}
+            state={{ prevPath: location.pathname }}
+          >
+            {menuOpened ? (
               <img src={logoUrl} alt="logo" />
             ) : (
               <img src={altLogoUrl} alt="logo" />
             )}
             KW
           </Link>
-          <div className={styles.navbarContact}>
-            <Item text="Contact" path="/contact/" />
+          <div
+            className={classnames(
+              styles.navbarContact,
+              preload ? styles.preLoad : null
+            )}
+          >
+            <Item
+              location={location}
+              text="Contact"
+              path="/contact/"
+              active={isContact}
+            />
           </div>
         </div>
-        {this.state.menuOpened && <Menu />}
+        {menuOpened && <Menu location={location} />}
       </>
     )
   }

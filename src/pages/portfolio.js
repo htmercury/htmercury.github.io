@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 import { Location } from "@reach/router"
 
-const IndexPage = ({ location }) => (
+const PortfolioPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="Home" />
     <h1>Hi people</h1>
@@ -40,6 +40,6 @@ const IndexPage = ({ location }) => (
 
 export default props => (
   <Location>
-    {locationProps => <IndexPage {...locationProps} {...props} />}
+    {locationProps => <PortfolioPage {...locationProps} {...props} />}
   </Location>
-);
+)

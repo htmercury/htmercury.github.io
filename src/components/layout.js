@@ -15,7 +15,7 @@ import Navbar from "./navbar"
 import Footer from "./footer"
 import styles from "../styles/layout.module.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -37,8 +37,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Navbar />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Navbar location={location} />
+      <Header siteTitle={data.site.siteMetadata.title} location={location} />
       <main className={styles.content}>{children}</main>
       <div className={styles.wrapper}></div>
       <Footer />
@@ -48,6 +48,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired
 }
 
 export default Layout

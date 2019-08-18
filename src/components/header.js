@@ -1,41 +1,88 @@
+import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import Item from "./item"
+import classnames from "classnames"
 
-import styles from "../styles/header.module.scss";
+import styles from "../styles/header.module.scss"
+import logoUrl from "../assets/cubicle.svg"
 
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
+class Header extends React.Component {
+  constructor() {
+    super(...arguments)
 
-const Header = ({ siteTitle }) => (
-  <header className={styles.sideBar}>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-        <h3 style={{ display: `inline` }}>{siteTitle}</h3>
-      </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/technologies">Technologies</ListLink>
-        <ListLink to="/experience/">Experience</ListLink>
-        <ListLink to="/portfolio/">Portfolio</ListLink>
-        <ListLink to="/notes/">Notes</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
-      </ul>
-    </div>
-  </header>
-)
+    this.state = {
+      preLoad: true,
+      postLoad: false,
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ preLoad: false })
+    }, 50)
+  }
+
+  render() {
+    const { siteTitle, location } = this.props
+    const { preLoad, postLoad } = this.state
+
+    const routes = [
+      { text: "Home", path: "/" },
+      { text: "Technolgies", path: "/technologies/" },
+      { text: "Experience", path: "/experience/" },
+      { text: "Portfolio", path: "/portfolio/" },
+      { text: "Notes", path: "/notes/" },
+      { text: "Contact", path: "/contact/" },
+    ]
+
+    return (
+      <header className={styles.sideBar}>
+        <div className={styles.logoWrapper}>
+          <Link
+            to="/"
+            className={styles.headerLogo}
+            state={{ prevPath: location.pathname }}
+          >
+            <img src={logoUrl} alt="logo" />
+            KW
+          </Link>
+          <p>Programmer</p>
+          <p>Software Engineer</p>
+          <p>Full-Stack Developer</p>
+        </div>
+        <div className={styles.navWrapper}>
+          <nav
+            className={classnames(
+              preLoad ? styles.preLoad : null,
+              postLoad ? styles.postLoad : null
+            )}
+          >
+            {routes.map(r => (
+              <Item
+                location={location}
+                text={r.text}
+                path={r.path}
+                active={location.pathname === r.path}
+                key={r.path}
+              />
+            ))}
+          </nav>
+        </div>
+        <div className={styles.headerContact}>
+          <p>
+            For business enquiries or casual chatter—do drop me a line at{" "}
+            <a href="mailto: something@abc.xyz">something@abc.xyz</a>.
+          </p>
+        </div>
+      </header>
+    )
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  location: PropTypes.object.isRequired,
 }
 
 Header.defaultProps = {

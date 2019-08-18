@@ -3,9 +3,10 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Location } from "@reach/router"
 
-const SecondPage = () => (
-  <Layout>
+const SecondPage = ({ location }) => (
+  <Layout location={location}>
     <SEO title="Page two" />
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
@@ -13,4 +14,8 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default props => (
+  <Location>
+    {locationProps => <SecondPage {...locationProps} {...props} />}
+  </Location>
+)
