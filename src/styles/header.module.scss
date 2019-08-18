@@ -90,6 +90,7 @@
     display: grid;
 
     p {
+      word-break: break-word;
       align-self: flex-end;
       margin-bottom: 40px;
       > a {

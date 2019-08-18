@@ -72,7 +72,7 @@ class Header extends React.Component {
         <div className={styles.headerContact}>
           <p>
             For business enquiries or casual chatter—do drop me a line at{" "}
-            <a href="mailto: something@abc.xyz">something@abc.xyz</a>.
+            <a href="mailto: kawong2020@u.northwestern.edu">kawong2020@u.northwestern.edu</a>.
           </p>
         </div>
       </header>
