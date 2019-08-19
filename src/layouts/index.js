@@ -30,7 +30,7 @@ class Layout extends React.Component {
 
   flicker() {
     this.setState({ preLoad: true })
-    setTimeout(() => this.setState({ preLoad: false }), 500)
+    setTimeout(() => this.setState({ preLoad: false }), 350)
   }
 
   render() {

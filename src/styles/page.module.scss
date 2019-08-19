@@ -1,0 +1,45 @@
+.title {
+  font-family: "Raleway", sans-serif;
+  padding-top: 0;
+  font-size: 2em;
+  font-weight: 300;
+  color: #e5e5e5;
+  text-shadow: 2px 2px 4px black;
+  user-select: initial;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #d2d2d2;
+  text-align: left;
+  text-shadow: 2px 2px 4px black;
+  user-select: initial;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.container {
+  padding: 15px 25px;
+  text-align: left;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+  user-select: initial;
+  transition: filter 0.15s;
+  background: #151724;
+  border-radius: 5px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #363f87;
+    transition: color 0.15s;
+
+    &:hover {
+      color: #3d4899;
+    }
+  }
+}

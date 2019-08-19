@@ -1,33 +1,43 @@
 @import "./colors";
 
-.title {
-  font-family: "Raleway", sans-serif;
-  padding-top: 0;
-  font-size: 2em;
-  font-weight: 300;
-  color: #e5e5e5;
-  text-shadow: 2px 2px 4px black;
+
+.title-wrapper {
+  padding: 5px 25px;
+  text-align: left;
   user-select: initial;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-bottom: 14px;
+  transition: filter 0.15s;
+  border-radius: 5px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 20px;
+
+  .title {
+    font-family: "Raleway", sans-serif;
+    padding-top: 0;
+    font-size: 2em;
+    font-weight: 300;
+    color: #e5e5e5;
+    text-shadow: 2px 2px 4px black;
+    user-select: initial;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .subtitle {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    color: #d2d2d2;
+    text-align: left;
+    text-shadow: 2px 2px 4px black;
+    user-select: initial;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
-.subtitle {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  color: #d2d2d2;
-  text-align: left;
-  text-shadow: 2px 2px 4px black;
-  user-select: initial;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin-bottom: 24px;
-}
 
 .content {
-  padding: 15px 20px;
+  padding: 15px 25px;
   text-align: left;
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
   user-select: initial;
@@ -38,9 +48,30 @@
   font-family: "Lato", sans-serif;
 
   a {
+    font-weight: 700;
     text-decoration: none;
-    color: #e5e5e5;
-    background: #424242;
+    color: #363f87;
+    transition: color 0.15s;
+
+    &:hover {
+      color: #3d4899;
+    }
+  }
+
+  > h1 {
+    text-align: center;
+    font-size: 2em;
+    padding: 10px 5px 25px 0;
+    margin: 0;
+    border-bottom: 1px solid #272f62;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+  }
+
+  > span {
+    display: inline-block;
+    padding: 20px 0;
+    box-shadow: inset 0 18px 15px -20px #202650, inset 0 -18px 15px -20px #202650;
   }
 }
 
@@ -49,6 +80,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
   margin: 20px 0;
+  margin-bottom: 5px;
 
   > div {
     display: grid;
