@@ -1,4 +1,4 @@
-@import './colors';
+@import "./colors";
 
 .title {
   font-family: "Raleway", sans-serif;
@@ -46,14 +46,26 @@
 
 .explore-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
-  margin: 20px 100px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin: 20px 0;
+
+  > div {
+    display: grid;
+    justify-content: flex-start;
+  }
+
+  > div:first-child {
+    display: grid;
+    justify-content: flex-end;
+  }
 
   a {
     text-decoration: none;
 
     button {
+      min-width: 200px;
+      max-width: 250px;
       font-family: "Lato", sans-serif;
       position: relative;
       display: inline-flex;
@@ -70,6 +82,7 @@
       color: #e5e5e5;
       font-weight: 300;
       text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+      box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
 
       background: #363f87;
 
@@ -84,14 +97,21 @@
         color: color(#e5e5e5, 100);
         cursor: default;
 
-        & > .icon {
+        & > svg {
           fill: color(#e5e5e5, 200);
         }
       }
 
-      & > .icon {
+      & > svg {
         fill: #e5e5e5;
+        margin-right: 5px;
       }
     }
+  }
+}
+
+@media (max-width: 520px) {
+  .explore-content > div {
+    justify-content: center !important;
   }
 }

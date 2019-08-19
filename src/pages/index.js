@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { IoIosDocument, IoIosPaperPlane } from "react-icons/io"
+import { FaPencilRuler, FaRegPaperPlane } from "react-icons/fa"
 
 import SEO from "../components/seo"
 
@@ -35,18 +36,22 @@ const IndexPage = ({ location }) => (
       </span>
     </div>
     <div className={styles.exploreContent}>
-      <Link to="/portfolio/">
-        <button>
-          <IoIosDocument />
-          See my work
-        </button>
-      </Link>
-      <Link to="/contact/">
-        <button>
-          <IoIosPaperPlane />
-          Contact me
-        </button>
-      </Link>
+      <div>
+        <Link to="/portfolio/">
+          <button>
+            <FaPencilRuler />
+            See my work
+          </button>
+        </Link>
+      </div>
+      <div>
+        <Link to="/contact/">
+          <button>
+            <FaRegPaperPlane />
+            Get in touch
+          </button>
+        </Link>
+      </div>
     </div>
   </>
 )
