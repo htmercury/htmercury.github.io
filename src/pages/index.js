@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { IoIosDocument, IoIosPaperPlane } from "react-icons/io"
 import { FaPencilRuler, FaRegPaperPlane } from "react-icons/fa"
 
 import SEO from "../components/seo"
@@ -31,7 +30,7 @@ const IndexPage = ({ location }) => (
         new initiatives. Feel free to get in touch if you have an interesting
         project that you want to collaborate on. Or if you just want to
         say&nbsp;
-        <a href="mailto: kawong2020@u.northwestern.edu">hello</a>, that’s cool
+        <a href="mailto:kawong2020@u.northwestern.edu" target="_blank">hello</a>, that’s cool
         too.
       </span>
     </div>

@@ -5,6 +5,7 @@ import Item from "./item"
 
 import styles from "../styles/header.module.scss"
 import logoUrl from "../assets/cubicle.svg"
+import { FaGithubAlt, FaLinkedinIn, FaMailBulk } from "react-icons/fa"
 
 class Header extends React.Component {
   render() {
@@ -62,6 +63,17 @@ class Header extends React.Component {
             </a>
             .
           </p>
+          <div className={styles.linkWrapper}>
+            <a href="https://github.com/htmercury" target="_blank">
+              <FaGithubAlt />
+            </a>
+            <a href="https://www.linkedin.com/in/htmercury/" target="_blank">
+              <FaLinkedinIn />
+            </a>
+            <a href="mailto:kawong2020@u.northwestern.edu" target="_blank">
+              <FaMailBulk />
+            </a>
+          </div>
         </div>
       </header>
     )

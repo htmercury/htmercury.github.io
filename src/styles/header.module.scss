@@ -82,10 +82,20 @@
     p {
       word-break: break-word;
       align-self: flex-end;
-      margin-bottom: 40px;
       > a {
         color: #e5e5e5;
         text-decoration: none;
+      }
+    }
+    .link-wrapper {
+      > a {
+        color: #e5e5e5;
+        margin: 0 0.4rem;
+        display: inline-block;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
       }
     }
   }
