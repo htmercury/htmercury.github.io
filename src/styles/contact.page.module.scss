@@ -1,36 +1,40 @@
 .contact-wrapper {
-    > div {
-        width: fit-content;
-        font-size: 1.25em;
-        a > div {
-            display: flex;
-            height: 3.625rem;
-            align-items: center;
-            color: #e5e5e5;
-            font-weight: 300;
-    
-            svg {
-                margin-right: 5px;
-            }
-        }
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  > div {
+    width: fit-content;
+    font-size: 1.25em;
+    a > div {
+      display: flex;
+      height: 3.625rem;
+      align-items: center;
+      color: #e5e5e5;
+      font-weight: 300;
+
+      svg {
+        margin-right: 5px;
+      }
     }
+  }
 }
 
 .contact-container {
-    position: relative;
-    padding: 50px;
+  position: relative;
+  padding: 75px 0;
+  padding-bottom: 100px;
 }
 
 .contact-overlay {
-    margin-left: -24px;
-    margin-right: -24px;
-    background: rgba(0,0,0,0.45);
-    padding: 50px 24px;
-    transform: skewY(8deg);
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+  margin-left: -24px;
+  margin-right: -24px;
+  background: rgba(0, 0, 0, 0.45);
+  transform: skewY(5deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }

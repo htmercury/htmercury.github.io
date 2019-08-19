@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import genStyles from "../styles/page.module.scss"
+
 import Image from "../components/image"
 import SEO from "../components/seo"
 
@@ -8,8 +10,8 @@ import { Location } from "@reach/router"
 
 const TechnologiesPage = ({ location }) => (
   <>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
+    <SEO title="Technologies" />
+    <div className={genStyles.title}>Technologies.</div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mollis
       nisi. Ut eget odio at metus mollis convallis. Nam lacinia iaculis tortor

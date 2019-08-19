@@ -93,6 +93,7 @@ class Navbar extends React.Component {
               text="Contact"
               path="/contact/"
               active={isContact}
+              handler={this.closeMenu}
             />
           </div>
         </div>
