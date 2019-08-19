@@ -1,0 +1,97 @@
+@import './colors';
+
+.title {
+  font-family: "Raleway", sans-serif;
+  padding-top: 0;
+  font-size: 2em;
+  font-weight: 300;
+  color: #e5e5e5;
+  text-shadow: 2px 2px 4px black;
+  user-select: initial;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #d2d2d2;
+  text-align: left;
+  text-shadow: 2px 2px 4px black;
+  user-select: initial;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.content {
+  padding: 15px 20px;
+  text-align: left;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+  user-select: initial;
+  transition: filter 0.15s;
+  background: #151724;
+  border-radius: 5px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+
+  a {
+    text-decoration: none;
+    color: #e5e5e5;
+    background: #424242;
+  }
+}
+
+.explore-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  margin: 20px 100px;
+
+  a {
+    text-decoration: none;
+
+    button {
+      font-family: "Lato", sans-serif;
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.1s, color 0.1s, fill 0.1s;
+      width: 100%;
+
+      color: #e5e5e5;
+      font-weight: 300;
+      text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+
+      background: #363f87;
+
+      &:hover {
+        background: color(#363f87, 600);
+      }
+      &:active {
+        background: color(#363f87, 300);
+      }
+      &.disabled {
+        background: mix(#363f87, #333) !important;
+        color: color(#e5e5e5, 100);
+        cursor: default;
+
+        & > .icon {
+          fill: color(#e5e5e5, 200);
+        }
+      }
+
+      & > .icon {
+        fill: #e5e5e5;
+      }
+    }
+  }
+}

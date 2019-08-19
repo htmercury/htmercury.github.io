@@ -1,39 +1,53 @@
 import React from "react"
 import { Link } from "gatsby"
+import { IoIosDocument, IoIosPaperPlane } from "react-icons/io"
 
-import Image from "../components/image"
 import SEO from "../components/seo"
+
+import styles from "../styles/index.page.module.scss"
 
 import { Location } from "@reach/router"
 
 const IndexPage = ({ location }) => (
   <>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mollis
-      nisi. Ut eget odio at metus mollis convallis. Nam lacinia iaculis tortor
-      nec scelerisque. Etiam in est vel erat luctus ultrices non et arcu. In
-      bibendum dui vel ex fermentum mollis. In pulvinar, leo volutpat placerat
-      euismod, urna eros vulputate massa, et egestas sem velit quis arcu.
-      Praesent erat enim, pellentesque et enim et, rutrum lobortis nulla. Nulla
-      facilisi. Fusce vel libero tristique elit luctus molestie. Vestibulum
-      iaculis libero eu metus fermentum bibendum. Nulla tincidunt mi et
-      malesuada luctus. Donec molestie ut ipsum ac mollis. Vivamus a semper
-      elit, nec fringilla turpis. Proin dignissim sapien vel dui varius gravida.
-      Suspendisse aliquam faucibus ex egestas pharetra. Aenean non sodales mi.
-      Donec porta leo quis egestas hendrerit. Mauris ornare, odio vitae
-      facilisis pulvinar, metus enim fringilla elit, nec sagittis enim risus eu
-      mauris. Sed auctor orci hendrerit nisl dictum viverra. Praesent rhoncus,
-      libero vitae scelerisque facilisis, eros lorem faucibus tortor, sed
-      lacinia sapien purus elementum erat. Vestibulum et maximus diam, sit amet
-      aliquet felis. Donec ultricies, diam et interdum ullamcorper, tortor neque
-      sollicitudin nisl, id condimentum odio eros a nunc.
-    </p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className={styles.title}>Hey. I'm Ka.</div>
+    <div className={styles.subtitle}>
+      A full-stack engineer based in Chicago, Illinois.
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <div className={styles.content}>
+      <span>
+        Like my ancestors, I make interactive things on the internet. I am a
+        senior CS student at Northwestern and am currently employed by COVERT
+        NINE as a React Developer Intern. Before COVERT NINE, I was a Full Stack
+        Developer Trainee at Coding Dojo. Before Coding Dojo, I volunteered at
+        Northwestern's Garage start-up scene. Before that, I was a baby.
+        <br />
+        <br />
+        I like to design things, and then I like to build those things.
+        <br />
+        <br />I occasionally take on freelance projects. I'm always looking for
+        new initiatives. Feel free to get in touch if you have an interesting
+        project that you want to collaborate on. Or if you just want to
+        say&nbsp;
+        <a href="mailto: kawong2020@u.northwestern.edu">hello</a>, that’s cool
+        too.
+      </span>
+    </div>
+    <div className={styles.exploreContent}>
+      <Link to="/portfolio/">
+        <button>
+          <IoIosDocument />
+          See my work
+        </button>
+      </Link>
+      <Link to="/contact/">
+        <button>
+          <IoIosPaperPlane />
+          Contact me
+        </button>
+      </Link>
+    </div>
   </>
 )
 
@@ -41,4 +55,4 @@ export default props => (
   <Location>
     {locationProps => <IndexPage {...locationProps} {...props} />}
   </Location>
-);
+)

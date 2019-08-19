@@ -33,14 +33,11 @@
       }
 
       span > span {
-        background: #363f87 !important;
+        display: none;
       }
 
       &[data-active="true"] {
         color: black !important;
-        span > span {
-          display: none;
-        }
       }
     }
   }

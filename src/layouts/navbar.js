@@ -16,13 +16,15 @@ class Navbar extends React.Component {
     const { location } = this.props
 
     this.state = {
-      scrollPosition: window.scrollY,
+      scrollPosition: 0,
       menuOpened: false,
       preload: true,
     }
   }
 
   componentDidMount() {
+    this.setState({ scrollPosition: window.scrollY })
+
     setTimeout(() => {
       this.setState({ preload: false })
     }, 50)
