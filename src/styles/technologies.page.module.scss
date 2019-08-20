@@ -1,0 +1,217 @@
+@keyframes logo-transform {
+  0% {
+    transform: translate(0px) rotateY(0);
+  }
+  10% {
+    transform: translate(90px) rotateY(0);
+  }
+  30% {
+    transform: translate(90px) rotateY(0);
+  }
+  40% {
+    transform: translate(0px) rotateY(0);
+  }
+  45% {
+    transform: translate(0px) rotateY(180deg);
+  }
+  50% {
+    transform: translate(0px) rotateY(180deg);
+  }
+  60% {
+    transform: translate(70px) rotateY(180deg);
+  }
+  80% {
+    transform: translate(70px) rotateY(180deg);
+  }
+  90% {
+    transform: translate(0) rotateY(180deg);
+  }
+  95% {
+    transform: translate(0) rotateY(0);
+  }
+  100% {
+    transform: translate(0) rotateY(0);
+  }
+}
+
+@keyframes HTML-flip {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes CSS-flip {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-left {
+  to {
+    transform: translate(-60%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.tech-grid {
+  > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    max-width: 1080px;
+    margin: 1rem 0;
+
+    .tech {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:first-child {
+          height: 200px;
+        }
+
+        &:not(:first-child) {
+          background: #202650;
+        }
+      }
+
+      .gen-wrapper {
+          height: 33%;
+          margin: 0;
+      }
+
+      .core-wrapper {
+          height: 50%;
+          margin: 0;
+      }
+
+      .moving-wrapper {
+        display: inline-flex;
+        justify-content: space-around;
+        width: 240%;
+        animation: slide-left 120s linear alternate both infinite;
+
+        > img {
+          height: 70%;
+          flex: 0 0 auto;
+          padding: 0px 16px;
+          margin: 0;
+        }
+      }
+
+      .spinning-wrapper {
+        font-family: "Lato", sans-serif;
+        img {
+          margin-bottom: 0;
+          height: 90px;
+          animation: spin 120s linear both infinite;
+        }
+
+        display: flex;
+        flex-direction: column;
+        font-size: 32px;
+        font-weight: 900;
+        text-align: center;
+        border-radius: 100%;
+        color: white;
+      }
+
+      .html-css-wrapper {
+        position: relative;
+        > div {
+          align-items: center;
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          perspective: 1000px;
+          width: 100%;
+
+          @media (min-width: 1140px) {
+            transform: scale(1.5);
+          }
+
+          .html-css-img {
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translate(100px);
+            animation: logo-transform 10s forwards infinite ease;
+            font-family: "Lato", sans-serif;
+
+            img {
+              backface-visibility: hidden;
+              width: 72px;
+
+              &:not(:first-child) {
+                bottom: 0px;
+                left: 0px;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                transform: rotateY(180deg) translateZ(2px);
+              }
+            }
+          }
+
+          div:not(.html-css-img) {
+            color: white;
+            font-size: 54px;
+            font-weight: 900;
+            padding-right: 88px;
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0px);
+
+            &:nth-child(2) {
+              animation: HTML-flip 10s forwards infinite ease;
+            }
+
+            &:nth-child(3) {
+              opacity: 0;
+              animation: CSS-flip 10s forwards infinite ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
