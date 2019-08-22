@@ -50,7 +50,7 @@ const TechnologiesPage = ({ location }) => (
                 and ES7 daily, and have professional experience with modern
                 tooling such as Node, Webpack, Babel, and the package managers
                 npm and yarn. I have worked in TDD environments and have used
-                the testing framework Jasmine.`
+                the testing framework Jasmine.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ const TechnologiesPage = ({ location }) => (
               <h3>React.</h3>
               <p>
                 I have 3 years experience with React, building websites,
-                applications, and component libraries. I also have used the
+                applications, and component libraries. I also have used a
                 similar framework React Native to build mobile apps. I started
                 using React professionally since last year, and have been
                 exposed to using both Redux and a bit of Apollo which uses

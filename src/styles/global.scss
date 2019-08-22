@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("../../static/Raleway/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../static/Lato/Lato-Regular.ttf");
+}
+
 body,
 body * {
   text-rendering: optimizelegibility;
