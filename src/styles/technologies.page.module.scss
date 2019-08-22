@@ -88,7 +88,7 @@
 .tech-grid {
   > div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 1rem;
     max-width: 1080px;
     margin: 1rem 0;
@@ -102,26 +102,37 @@
 
       > div {
         display: flex;
-        justify-content: center;
-        align-items: center;
 
         &:first-child {
           height: 200px;
+          justify-content: center;
+          align-items: center;
         }
 
         &:not(:first-child) {
           background: #202650;
         }
+
+        .tech-content {
+            padding: 0 1rem;
+            > h3 {
+                margin: 1rem 0;
+                color: white;
+                font-size: 24px;
+                font-weight: 900;
+                font-family: 'Raleway', sans-serif
+            }
+        }
       }
 
       .gen-wrapper {
-          height: 33%;
-          margin: 0;
+        height: 33%;
+        margin: 0;
       }
 
       .core-wrapper {
-          height: 50%;
-          margin: 0;
+        height: 50%;
+        margin: 0;
       }
 
       .moving-wrapper {
