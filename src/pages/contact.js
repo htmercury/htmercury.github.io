@@ -18,37 +18,41 @@ const ContactPage = ({ location }) => (
     <div className={styles.contactContainer}>
       <div className={styles.contactOverlay}></div>
       <div className={genStyles.title}>Ways to get in touch.</div>
-        <div className={classnames(genStyles.container, styles.contactWrapper)}>
-          <div>
-            <a href="mailto:kawong2020@u.northwestern.edu" target="_blank">
-              <div>
-                <FaMailBulk />
-                kawong2020@u.northwestern.edu
-              </div>
-            </a>
-            <a href="https://www.linkedin.com/in/htmercury/" target="_blank">
-              <div>
-                <FaLinkedinIn />
-                linkedin.com/in/htmercury
-              </div>
-            </a>
-            <a href="https://github.com/htmercury" target="_blank">
-              <div>
-                <FaGithubAlt />
-                github.com/htmercury
-              </div>
-            </a>
-            <a
-              href="https://www.google.com/maps/place/Chicago,IL"
-              target="_blank"
-            >
-              <div>
-                <FaMapMarkerAlt />
-                Chicago, IL, USA
-              </div>
-            </a>
-          </div>
+      <div className={classnames(genStyles.container, styles.contactWrapper)}>
+        <div>
+          <a href="mailto:kawong2020@u.northwestern.edu" target="_blank">
+            <div>
+              <FaMailBulk />
+              kawong2020@u.northwestern.edu
+              <span className="sr-only">Link leads to external page.</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/htmercury/" target="_blank">
+            <div>
+              <FaLinkedinIn />
+              linkedin.com/in/htmercury
+              <span className="sr-only">Link leads to external page.</span>
+            </div>
+          </a>
+          <a href="https://github.com/htmercury" target="_blank">
+            <div>
+              <FaGithubAlt />
+              github.com/htmercury
+              <span className="sr-only">Link leads to external page.</span>
+            </div>
+          </a>
+          <a
+            href="https://www.google.com/maps/place/Chicago,IL"
+            target="_blank"
+          >
+            <div>
+              <FaMapMarkerAlt />
+              Chicago, IL, USA
+              <span className="sr-only">Link leads to external page.</span>
+            </div>
+          </a>
         </div>
+      </div>
     </div>
   </>
 )

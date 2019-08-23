@@ -7,12 +7,15 @@ const Footer = () => (
     <div className={styles.linkWrapper}>
       <a href="https://github.com/htmercury" target="_blank">
         <FaGithubAlt />
+        <span className="sr-only">Link leads to external page.</span>
       </a>
       <a href="https://www.linkedin.com/in/htmercury/" target="_blank">
         <FaLinkedinIn />
+        <span className="sr-only">Link leads to external page.</span>
       </a>
       <a href="mailto:kawong2020@u.northwestern.edu" target="_blank">
         <FaMailBulk />
+        <span className="sr-only">Link leads to external page.</span>
       </a>
     </div>
     <div>

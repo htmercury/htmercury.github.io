@@ -1,6 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FaPencilRuler, FaRegPaperPlane } from "react-icons/fa"
+import {
+  FaPencilRuler,
+  FaRegPaperPlane,
+  FaExternalLinkAlt,
+} from "react-icons/fa"
 
 import SEO from "../components/seo"
 
@@ -31,13 +35,13 @@ const IndexPage = ({ location }) => (
         <br />
         <br />I occasionally take on freelance projects. I'm always looking for
         new initiatives. Feel free to get in touch if you have an interesting
-        project that you want to collaborate on. Or if you just want to
-        say{" "}
+        project that you want to collaborate on. Or if you just want to say{" "}
         <a
           href="mailto:kawong2020@u.northwestern.edu?subject=hi"
           target="_blank"
         >
-          hello
+          hello <FaExternalLinkAlt />
+          <span className="sr-only">Link leads to external page.</span>
         </a>
         , that’s cool too.
       </span>

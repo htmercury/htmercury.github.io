@@ -1,41 +1,32 @@
 import React from "react"
-import { Link } from "gatsby"
+import classnames from "classnames"
 
 import genStyles from "../styles/page.module.scss"
+import styles from "../styles/experience.pages.module.scss"
 
-import Image from "../components/image"
 import SEO from "../components/seo"
+import ProfileImage from "../components/profile-image"
 
 import { Location } from "@reach/router"
 
 const ExperiencePage = ({ location }) => (
   <>
     <SEO title="Experience" />
-    <div className={genStyles.title}>Career.</div>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mollis
-      nisi. Ut eget odio at metus mollis convallis. Nam lacinia iaculis tortor
-      nec scelerisque. Etiam in est vel erat luctus ultrices non et arcu. In
-      bibendum dui vel ex fermentum mollis. In pulvinar, leo volutpat placerat
-      euismod, urna eros vulputate massa, et egestas sem velit quis arcu.
-      Praesent erat enim, pellentesque et enim et, rutrum lobortis nulla. Nulla
-      facilisi. Fusce vel libero tristique elit luctus molestie. Vestibulum
-      iaculis libero eu metus fermentum bibendum. Nulla tincidunt mi et
-      malesuada luctus. Donec molestie ut ipsum ac mollis. Vivamus a semper
-      elit, nec fringilla turpis. Proin dignissim sapien vel dui varius gravida.
-      Suspendisse aliquam faucibus ex egestas pharetra. Aenean non sodales mi.
-      Donec porta leo quis egestas hendrerit. Mauris ornare, odio vitae
-      facilisis pulvinar, metus enim fringilla elit, nec sagittis enim risus eu
-      mauris. Sed auctor orci hendrerit nisl dictum viverra. Praesent rhoncus,
-      libero vitae scelerisque facilisis, eros lorem faucibus tortor, sed
-      lacinia sapien purus elementum erat. Vestibulum et maximus diam, sit amet
-      aliquet felis. Donec ultricies, diam et interdum ullamcorper, tortor neque
-      sollicitudin nisl, id condimentum odio eros a nunc.
-    </p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className={genStyles.title}>Experience.</div>
+    <div className={styles.experienceGrid}>
+      <div className={classnames(genStyles.container, styles.profileContainer)}>
+        <h3 className={styles.title}>Overview</h3>
+        <div className={styles.profile}>
+          <ProfileImage />
+        </div>
+      </div>
+      <div className={classnames(genStyles.container, styles.careerContainer)}>
+        <h3 className={styles.title}>Career</h3>
+        <div className={styles.career}>
+
+        </div>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </>
 )
 
