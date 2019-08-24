@@ -15,28 +15,39 @@ const ExperiencePage = ({ location }) => (
     <SEO title="Experience" />
     <div className={genStyles.title}>Experience.</div>
     <div className={styles.experienceGrid}>
-      <div className={classnames(genStyles.container, styles.profileContainer)}>
-        <h3 className={styles.title}>Overview.</h3>
-        <div className={styles.profile}>
-          <ProfileImage />
-        </div>
-        <div className={styles.profileInfo}>
-          <p>Name</p>
-          <p>Ka Wong</p>
-        </div>
-        <div className={styles.profileInfo}>
-          <p>Age</p>
-          <p>21</p>
-        </div>
-        <div className={styles.profileInfo}>
-          <p>Residence</p>
-          <p>Chicago, Illinois</p>
-        </div>
-        <div className={styles.profileInfo}>
-          <p>Hobbies</p>
-          <div>
-            <p>Reading books</p>
-            <p>Eating spicy stuff</p>
+      <div>
+        <div
+          className={classnames(genStyles.container, styles.profileContainer)}
+        >
+          <h3 className={styles.title}>Overview.</h3>
+          <div className={styles.profile}>
+            <ProfileImage />
+          </div>
+          <div className={styles.profileInfo}>
+            <p>Name</p>
+            <p>Ka Wong</p>
+          </div>
+          <div className={styles.profileInfo}>
+            <p>Age</p>
+            <p>21</p>
+          </div>
+          <div className={styles.profileInfo}>
+            <p>Residence</p>
+            <p>Chicago, Illinois</p>
+          </div>
+          <div className={styles.profileInfo}>
+            <p>Hobbies</p>
+            <div>
+              <p>Reading books</p>
+              <p>Eating spicy stuff</p>
+            </div>
+          </div>
+          <div className={styles.profileInfo}>
+            <p>Thoughts</p>
+            <p>
+              Code always does what you tell it to do, but you don't always tell
+              it what you want it to do.
+            </p>
           </div>
         </div>
       </div>
@@ -44,24 +55,44 @@ const ExperiencePage = ({ location }) => (
         <h3 className={styles.title}>Career.</h3>
         <div className={styles.career}>
           <h3>
-            title
-            <h5>time</h5>
+            React Developer Intern
+            <h5>(2019.6 - Present)</h5>
           </h3>
-          <p>description</p>
+          <p>
+            Responsible for maintaining and development of new features to an
+            open sourced components plugin using React.js + Redux that extends
+            the functionality of the current new editor of WordPress, Gutenberg (2018),
+            which is still in its development stages.
+          </p>
           <hr></hr>
           <h3>
-            title
-            <h5>time</h5>
+            Full Stack Developer Trainee
+            <h5>(2018.6 - 2018.9)</h5>
           </h3>
-          <p>description</p>
+          <p>
+            Received on-hands training for using various technologies including:
+            Django, Flask, Node using Express, C# Net Core, mySQL, MongoDB, and
+            Angular to create full stack applications. Gained valuable
+            experience in web architectural patterns especially about REST, MVC,
+            and also familiarity working with HTTP methods. In addition,
+            obtained exposure deploying web applications using AWS or Azure.
+          </p>
+          <p>
+            Also, in private, he learns React, Redux, GraphQL, and other
+            technologies.
+          </p>
           <div>
-            <span>test</span>
+            <span>(Various twists and turns)</span>
           </div>
           <h3>
-            title
-            <h5>time</h5>
+            High school student
+            <h5>(2012)</h5>
           </h3>
-          <p>description</p>
+          <p>
+            For some reason, he chances upon Minecraft Mod development and wakes
+            up to the fun of programming. I am determined to make this a
+            lifelong job.
+          </p>
         </div>
         <Link
           to="/portfolio"

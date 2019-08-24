@@ -40,7 +40,6 @@
       > p {
         display: inline-block;
         text-align: left;
-        font-size: 1.1em;
 
         &:first-child {
           font-weight: bold;
@@ -60,6 +59,7 @@
         inset 0 -18px 15px -20px #202650;
 
       > h3 {
+        padding-top: 0.5rem;
         margin: 0;
         margin-bottom: 1rem;
         > h5 {
@@ -70,12 +70,12 @@
 
       > p {
         margin-bottom: 0;
-        padding-bottom: 0.5rem;
+        padding-bottom: 12px;
       }
 
       > hr {
         background: #bbb9bb;
-        margin-bottom: 20px;
+        margin: 12px 0;
         height: 1px;
       }
 
@@ -84,7 +84,7 @@
         align-items: center;
         display: flex;
         font-size: 0.8rem;
-        margin-bottom: 10px;
+        margin-bottom: 4px;
 
         &:before {
           margin-right: 0.5rem;
