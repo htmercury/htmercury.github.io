@@ -2,9 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 import SEO from "../components/seo"
-import { Location } from "@reach/router"
 
-const SecondPage = ({ location }) => (
+const SecondPage = () => (
   <>
     <SEO title="Page two" />
     <h1>Hi from the second page</h1>
@@ -13,8 +12,4 @@ const SecondPage = ({ location }) => (
   </>
 )
 
-export default props => (
-  <Location>
-    {locationProps => <SecondPage {...locationProps} {...props} />}
-  </Location>
-)
+export default SecondPage

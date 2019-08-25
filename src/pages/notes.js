@@ -3,24 +3,18 @@ import React from "react"
 import SEO from "../components/seo"
 import genStyles from "../styles/page.module.scss"
 
-import { Location } from "@reach/router"
-
-const NotesPage = ({ location }) => (
+const NotesPage = () => (
   <>
     <SEO title="Notes" />
     <div className={genStyles.title}>Notebook.</div>
     <div className={genStyles.subtitle}>A collection of useful resources.</div>
-    
-    <ol>
-      <li>TBD</li>
-      <li>TBD</li>
-      <li>TBD</li>
-    </ol>
+
+    <div className={genStyles.container}>
+      <ol>
+        <li>Nothing here, just yet.</li>
+      </ol>
+    </div>
   </>
 )
 
-export default props => (
-  <Location>
-    {locationProps => <NotesPage {...locationProps} {...props} />}
-  </Location>
-)
+export default NotesPage

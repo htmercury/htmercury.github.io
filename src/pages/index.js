@@ -10,9 +10,7 @@ import SEO from "../components/seo"
 
 import styles from "../styles/index.page.module.scss"
 
-import { Location } from "@reach/router"
-
-const IndexPage = ({ location }) => (
+const IndexPage = () => (
   <>
     <SEO title="Home" />
     <div className={styles.titleWrapper}>
@@ -47,10 +45,10 @@ const IndexPage = ({ location }) => (
       </span>
       <div className={styles.exploreContent}>
         <div>
-          <Link to="/portfolio/">
+          <Link to="/technologies/">
             <button>
               <FaPencilRuler />
-              See my work
+              See what I know
             </button>
           </Link>
         </div>
@@ -67,8 +65,4 @@ const IndexPage = ({ location }) => (
   </>
 )
 
-export default props => (
-  <Location>
-    {locationProps => <IndexPage {...locationProps} {...props} />}
-  </Location>
-)
+export default IndexPage

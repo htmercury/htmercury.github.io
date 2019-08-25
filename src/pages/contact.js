@@ -10,9 +10,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa"
 
-import { Location } from "@reach/router"
-
-const ContactPage = ({ location }) => (
+const ContactPage = () => (
   <>
     <SEO title="Contact" />
     <div className={styles.contactContainer}>
@@ -57,8 +55,4 @@ const ContactPage = ({ location }) => (
   </>
 )
 
-export default props => (
-  <Location>
-    {locationProps => <ContactPage {...locationProps} {...props} />}
-  </Location>
-)
+export default ContactPage

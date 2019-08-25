@@ -4,6 +4,9 @@ import classnames from "classnames"
 import genStyles from "../styles/page.module.scss"
 import styles from "../styles/technologies.page.module.scss"
 
+import { Link } from "gatsby"
+import { FaArrowRight } from "react-icons/fa"
+
 // 1
 import babelUrl from "../assets/babel.svg"
 import webpackUrl from "../assets/webpack.svg"
@@ -22,9 +25,7 @@ import netcoreUrl from "../assets/NET_Core.svg"
 
 import SEO from "../components/seo"
 
-import { Location } from "@reach/router"
-
-const TechnologiesPage = ({ location }) => (
+const TechnologiesPage = () => (
   <>
     <SEO title="Technologies" />
     <div className={genStyles.title}>Technologies.</div>
@@ -149,8 +150,8 @@ const TechnologiesPage = ({ location }) => (
                 to create backend APIs for websites and mobile apps. I have
                 experience using LINQ, Dapper, and the Entity Framework to query
                 and model data. In addition, I have deployed full stack apps
-                using the Azure cloud service with a custom build pipline using
-                Azure devOps.
+                using the Azure cloud service with a custom build pipelines
+                using Azure devOps.
               </p>
             </div>
           </div>
@@ -158,11 +159,14 @@ const TechnologiesPage = ({ location }) => (
         <div></div>
       </div>
     </div>
+    <div className={styles.linkWrapper}>
+      <Link to="/experience/" className={genStyles.link}>
+        <button className={genStyles.button}>
+          Experience <FaArrowRight />
+        </button>
+      </Link>
+    </div>
   </>
 )
 
-export default props => (
-  <Location>
-    {locationProps => <TechnologiesPage {...locationProps} {...props} />}
-  </Location>
-)
+export default TechnologiesPage

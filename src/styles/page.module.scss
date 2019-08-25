@@ -58,7 +58,6 @@
   cursor: pointer;
   user-select: none;
   transition: background 0.1s, color 0.1s, fill 0.1s;
-  width: 100%;
 
   color: #e5e5e5;
   font-weight: 300;
@@ -97,5 +96,6 @@
 
   &:hover {
     color: #3d4899;
+    text-decoration: none;
   }
 }

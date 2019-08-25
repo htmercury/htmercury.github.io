@@ -2,9 +2,7 @@ import React from "react"
 
 import SEO from "../components/seo"
 
-import { Location } from "@reach/router"
-
-const NotFoundPage = ({location}) => (
+const NotFoundPage = () => (
   <>
     <SEO title="404: Not found" />
     <h1>NOT FOUND</h1>
@@ -12,8 +10,4 @@ const NotFoundPage = ({location}) => (
   </>
 )
 
-export default props => (
-  <Location>
-    {locationProps => <NotFoundPage {...locationProps} {...props} />}
-  </Location>
-);
+export default NotFoundPage

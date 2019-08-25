@@ -8,9 +8,7 @@ import SEO from "../components/seo"
 import ProfileImage from "../components/profile-image"
 import { Link } from "gatsby"
 
-import { Location } from "@reach/router"
-
-const ExperiencePage = ({ location }) => (
+const ExperiencePage = () => (
   <>
     <SEO title="Experience" />
     <div className={genStyles.title}>Experience.</div>
@@ -56,18 +54,18 @@ const ExperiencePage = ({ location }) => (
         <div className={styles.career}>
           <h3>
             React Developer Intern
-            <h5>(2019.6 - Present)</h5>
+            <span>(2019.6 - Present) @ COVERT NINE</span>
           </h3>
           <p>
             Responsible for maintaining and development of new features to an
             open sourced components plugin using React.js + Redux that extends
-            the functionality of the current new editor of WordPress, Gutenberg (2018),
-            which is still in its development stages.
+            the functionality of the current new editor of WordPress, Gutenberg
+            (2018), which is still in its development stages.
           </p>
           <hr></hr>
           <h3>
             Full Stack Developer Trainee
-            <h5>(2018.6 - 2018.9)</h5>
+            <span>(2018.6 - 2018.9) @ Coding Dojo</span>
           </h3>
           <p>
             Received on-hands training for using various technologies including:
@@ -86,16 +84,16 @@ const ExperiencePage = ({ location }) => (
           </div>
           <h3>
             High school student
-            <h5>(2012)</h5>
+            <span>(2012)</span>
           </h3>
           <p>
-            For some reason, he chances upon Minecraft Mod development and wakes
+            For some reason, he chances upon Minecraft mod development and wakes
             up to the fun of programming. I am determined to make this a
             lifelong job.
           </p>
         </div>
         <Link
-          to="/portfolio"
+          to="/portfolio/"
           className={classnames(genStyles.link, styles.seeWork)}
         >
           Click here to see my work!
@@ -105,8 +103,4 @@ const ExperiencePage = ({ location }) => (
   </>
 )
 
-export default props => (
-  <Location>
-    {locationProps => <ExperiencePage {...locationProps} {...props} />}
-  </Location>
-)
+export default ExperiencePage

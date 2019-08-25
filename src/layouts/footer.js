@@ -21,8 +21,11 @@ const Footer = () => (
     <div>
       © {new Date().getFullYear()}, Site built with
       {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a> — a React based web
-      framework
+      <a href="https://www.gatsbyjs.org" target="_blank">
+        Gatsby
+      </a>{" "}
+      — a React based web framework
+      <span className="sr-only">Link leads to external page.</span>
     </div>
   </footer>
 )
