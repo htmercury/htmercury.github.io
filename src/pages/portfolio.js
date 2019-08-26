@@ -50,7 +50,7 @@ const PortfolioPage = ({ data }) => (
             </h3>
             <p>
               Plane-a-picnic utilizes the open sourced data available on
-              <a href="http://ourairports.com/" target="_blank">
+              <a href="https://ourairports.com/" target="_blank">
                 {" "}
                 OurAirports
                 <span className="sr-only">Link leads to external page.</span>
@@ -163,7 +163,7 @@ const PortfolioPage = ({ data }) => (
               stores over 140+ champions comprising over multiple quotes in
               addition to a splash image. Quote transcriptions from{" "}
               <a
-                href="http://leagueoflegends.wikia.com/wiki/League_of_Legends_Wiki"
+                href="https://leagueoflegends.wikia.com/wiki/League_of_Legends_Wiki"
                 target="_blank"
               >
                 the unofficial League of Legends Wiki
@@ -171,7 +171,7 @@ const PortfolioPage = ({ data }) => (
               </a>
               , licensed under{" "}
               <a
-                href="http://creativecommons.org/licenses/by-sa/3.0/"
+                href="https://creativecommons.org/licenses/by-sa/3.0/"
                 target="_blank"
               >
                 CC-BY-SA
@@ -186,7 +186,7 @@ const PortfolioPage = ({ data }) => (
               </a>
               , owned by Riot Games and used following{" "}
               <a
-                href="http://www.riotgames.com/legal-jibber-jabber"
+                href="https://www.riotgames.com/legal-jibber-jabber"
                 target="_blank"
               >
                 Riot Games' guidelines
