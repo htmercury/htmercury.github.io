@@ -5,7 +5,7 @@ import {
 } from "react-transition-group";
 import "../styles/transition.page.scss";
 
-const timeout = 0;
+const timeout = 500;
 
 class Transition extends React.PureComponent {
   render() {
@@ -23,7 +23,7 @@ class Transition extends React.PureComponent {
           key={location.pathname}
           timeout={{
             enter: timeout,
-            exit: 0,
+            exit: 500,
           }}
         >
           {status => (
