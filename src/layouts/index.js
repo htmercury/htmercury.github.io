@@ -6,7 +6,6 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { ContextProviderComponent } from "./context";
 
 import Header from "./header";
 import Navbar from "./navbar";
@@ -40,10 +39,8 @@ class Layout extends React.Component {
 
     return (
       <>
-        <ContextProviderComponent>
-          <Navbar location={location} />
-          <Header location={location} flicker={this.flicker} />
-        </ContextProviderComponent>
+        <Navbar location={location} />
+        <Header location={location} flicker={this.flicker} />
         <main
           className={classnames(
             styles.content,

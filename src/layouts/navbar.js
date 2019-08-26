@@ -13,8 +13,6 @@ class Navbar extends React.Component {
   constructor() {
     super(...arguments)
 
-    const { location } = this.props
-
     this.state = {
       scrollPosition: 0,
       menuOpened: false,
@@ -36,6 +34,14 @@ class Navbar extends React.Component {
     window.removeEventListener("scroll", this.listenToScroll)
   }
 
+  transition = time => {
+    this.setState({ preload: true })
+
+    setTimeout(() => {
+      this.setState({ preload: false })
+    }, time)
+  }
+
   listenToScroll = () => {
     this.setState({
       scrollPosition: window.scrollY,
@@ -43,7 +49,11 @@ class Navbar extends React.Component {
   }
 
   closeMenu = () => {
-    this.setState({ menuOpened: false })
+    const { menuOpened } = this.state
+
+    if (menuOpened) {
+      this.setState({ menuOpened: false, scrollPosition: 0 })
+    }
   }
 
   render() {
@@ -57,7 +67,8 @@ class Navbar extends React.Component {
         <div
           className={classnames(
             styles.navbar,
-            menuOpened ? styles.shadowNone : null
+            menuOpened ? styles.shadowNone : null,
+            preload ? styles.navbarPreload : null
           )}
           data-scroll={scrollPosition}
         >
@@ -73,7 +84,10 @@ class Navbar extends React.Component {
             to="/"
             className={styles.navbarLogo}
             state={{ prevPath: location.pathname }}
-            onClick={this.closeMenu}
+            onClick={() => {
+              this.transition(50)
+              this.closeMenu()
+            }}
           >
             {menuOpened ? (
               <img src={logoUrl} alt="logo" />
@@ -85,7 +99,7 @@ class Navbar extends React.Component {
           <div
             className={classnames(
               styles.navbarContact,
-              preload ? styles.preLoad : null
+              preload ? styles.preload : null
             )}
           >
             <Item
@@ -93,11 +107,22 @@ class Navbar extends React.Component {
               text="Contact"
               path="/contact/"
               active={isContact}
-              handler={this.closeMenu}
+              handler={() => {
+                this.transition(50)
+                this.closeMenu()
+              }}
             />
           </div>
         </div>
-        {menuOpened && <Menu location={location} close={this.closeMenu} />}
+        {menuOpened && (
+          <Menu
+            location={location}
+            close={() => {
+              this.transition(100)
+              this.closeMenu()
+            }}
+          />
+        )}
       </>
     )
   }

@@ -20,7 +20,7 @@ const Menu = ({ hide, location, close }) => (
           text={r.text}
           path={r.path}
           active={location.pathname === r.path}
-          key={r.path}
+          key={r.text}
           handler={close}
         />
       ))}
