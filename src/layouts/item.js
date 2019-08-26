@@ -8,7 +8,7 @@ const Item = ({ text, path, handler, active, location }) =>
     <Link
       state={{ prevPath: location.pathname }}
       to={path}
-      onClick={() => {handler();}}
+      onClick={handler}
       className={classnames(styles.item, active ? styles.linkActive : null)}
       data-active={active}
     >
