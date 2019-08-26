@@ -9,7 +9,7 @@ const NotesPage = () => (
     <div className={genStyles.title}>Notebook.</div>
     <div className={genStyles.subtitle}>A collection of useful resources.</div>
 
-    <div className={genStyles.container}>
+    <div className={genStyles.container} style={{maxWidth: "1440px"}}>
       <ol>
         <li>Nothing here, just yet.</li>
       </ol>
