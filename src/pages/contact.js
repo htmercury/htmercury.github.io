@@ -1,14 +1,14 @@
-import React from "react"
-import SEO from "../components/seo"
-import classnames from "classnames"
-import genStyles from "../styles/page.module.scss"
-import styles from "../styles/contact.page.module.scss"
+import React from "react";
+import SEO from "../components/seo";
+import classnames from "classnames";
+import genStyles from "../styles/page.module.scss";
+import styles from "../styles/contact.page.module.scss";
 import {
   FaGithubAlt,
   FaLinkedinIn,
   FaMailBulk,
   FaMapMarkerAlt,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
 const ContactPage = () => (
   <>
@@ -53,6 +53,6 @@ const ContactPage = () => (
       </div>
     </div>
   </>
-)
+);
 
-export default ContactPage
+export default ContactPage;

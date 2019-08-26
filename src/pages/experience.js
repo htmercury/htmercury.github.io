@@ -1,12 +1,12 @@
-import React from "react"
-import classnames from "classnames"
+import React from "react";
+import classnames from "classnames";
 
-import genStyles from "../styles/page.module.scss"
-import styles from "../styles/experience.pages.module.scss"
+import genStyles from "../styles/page.module.scss";
+import styles from "../styles/experience.pages.module.scss";
 
-import SEO from "../components/seo"
-import ProfileImage from "../components/profile-image"
-import { Link } from "gatsby"
+import SEO from "../components/seo";
+import ProfileImage from "../components/profile-image";
+import { Link } from "gatsby";
 
 const ExperiencePage = () => (
   <>
@@ -101,6 +101,6 @@ const ExperiencePage = () => (
       </div>
     </div>
   </>
-)
+);
 
-export default ExperiencePage
+export default ExperiencePage;

@@ -1,7 +1,7 @@
-import React from "react"
-import styles from "../styles/menu.module.scss"
-import classnames from "classnames"
-import Item from "./item"
+import React from "react";
+import styles from "../styles/menu.module.scss";
+import classnames from "classnames";
+import Item from "./item";
 
 const routes = [
   { text: "Home", path: "/" },
@@ -9,7 +9,7 @@ const routes = [
   { text: "Experience", path: "/experience/" },
   { text: "Portfolio", path: "/portfolio/" },
   { text: "Notes", path: "/notes/" },
-]
+];
 
 const Menu = ({ hide, location, close }) => (
   <menu className={classnames(styles.modal, hide ? styles.modalHide : null)}>
@@ -26,6 +26,6 @@ const Menu = ({ hide, location, close }) => (
       ))}
     </nav>
   </menu>
-)
+);
 
-export default Menu
+export default Menu;

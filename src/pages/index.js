@@ -1,14 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 import {
   FaPencilRuler,
   FaRegPaperPlane,
   FaExternalLinkAlt,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 
-import styles from "../styles/index.page.module.scss"
+import styles from "../styles/index.page.module.scss";
 
 const IndexPage = () => (
   <>
@@ -63,6 +63,6 @@ const IndexPage = () => (
       </div>
     </div>
   </>
-)
+);
 
-export default IndexPage
+export default IndexPage;

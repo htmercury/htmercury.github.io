@@ -1,29 +1,29 @@
-import React from "react"
-import classnames from "classnames"
+import React from "react";
+import classnames from "classnames";
 
-import genStyles from "../styles/page.module.scss"
-import styles from "../styles/technologies.page.module.scss"
+import genStyles from "../styles/page.module.scss";
+import styles from "../styles/technologies.page.module.scss";
 
-import { Link } from "gatsby"
-import { FaArrowRight } from "react-icons/fa"
+import { Link } from "gatsby";
+import { FaArrowRight } from "react-icons/fa";
 
 // 1
-import babelUrl from "../assets/babel.svg"
-import webpackUrl from "../assets/webpack.svg"
-import nodeUrl from "../assets/node.svg"
-import yarnUrl from "../assets/yarn.svg"
-import npmUrl from "../assets/npm.svg"
+import babelUrl from "../assets/babel.svg";
+import webpackUrl from "../assets/webpack.svg";
+import nodeUrl from "../assets/node.svg";
+import yarnUrl from "../assets/yarn.svg";
+import npmUrl from "../assets/npm.svg";
 // 2
-import reactUrl from "../assets/react.svg"
+import reactUrl from "../assets/react.svg";
 // 3
-import htmlUrl from "../assets/html5.svg"
-import cssUrl from "../assets/css3.svg"
+import htmlUrl from "../assets/html5.svg";
+import cssUrl from "../assets/css3.svg";
 // 4
-import gatsbyUrl from "../assets/gatsby.svg"
+import gatsbyUrl from "../assets/gatsby.svg";
 // 5
-import netcoreUrl from "../assets/NET_Core.svg"
+import netcoreUrl from "../assets/NET_Core.svg";
 
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 
 const TechnologiesPage = () => (
   <>
@@ -167,6 +167,6 @@ const TechnologiesPage = () => (
       </Link>
     </div>
   </>
-)
+);
 
-export default TechnologiesPage
+export default TechnologiesPage;

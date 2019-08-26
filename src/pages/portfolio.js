@@ -1,13 +1,13 @@
-import React from "react"
-import classnames from "classnames"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import classnames from "classnames";
+import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
 
-import { FaArrowRight, FaGlobeAmericas, FaGithub } from "react-icons/fa"
-import genStyles from "../styles/page.module.scss"
-import styles from "../styles/portfolio.page.module.scss"
+import { FaArrowRight, FaGlobeAmericas, FaGithub } from "react-icons/fa";
+import genStyles from "../styles/page.module.scss";
+import styles from "../styles/portfolio.page.module.scss";
 
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 
 const PortfolioPage = ({ data }) => (
   <>
@@ -176,8 +176,8 @@ const PortfolioPage = ({ data }) => (
               >
                 CC-BY-SA
                 <span className="sr-only">Link leads to external page.</span>
-              </a>{" "}
-              Splash art from the{" "}
+              </a>
+              . Splash art from the{" "}
               <a
                 href="https://www.riotgames.com/asset-kit/league-of-legends"
                 target="_blank"
@@ -217,9 +217,9 @@ const PortfolioPage = ({ data }) => (
       </Link>
     </div>
   </>
-)
+);
 
-export default PortfolioPage
+export default PortfolioPage;
 
 export const query = graphql`
   query {
@@ -245,4 +245,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

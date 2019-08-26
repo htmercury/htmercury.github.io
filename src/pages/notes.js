@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import SEO from "../components/seo"
-import genStyles from "../styles/page.module.scss"
+import SEO from "../components/seo";
+import genStyles from "../styles/page.module.scss";
 
 const NotesPage = () => (
   <>
@@ -15,6 +15,6 @@ const NotesPage = () => (
       </ol>
     </div>
   </>
-)
+);
 
-export default NotesPage
+export default NotesPage;

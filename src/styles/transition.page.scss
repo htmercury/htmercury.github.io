@@ -1,0 +1,212 @@
+.entering {
+  &-home {
+    > div:first-child {
+      opacity: 0;
+      transform: translateX(-5%);
+    }
+
+    > div:not(:first-child) {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+  }
+
+  &-technologies {
+    > div:first-child {
+      opacity: 0;
+      transform: translateX(-5%);
+    }
+
+    > div:not(:first-child) > div > * {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+  }
+
+  &-experience {
+    > div:first-child {
+      opacity: 0;
+      transform: translateX(-5%);
+    }
+
+    > div:not(:first-child) > * {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+  }
+
+  &-portfolio {
+    > div:first-child,
+    div:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-5%);
+    }
+
+    > div:not(:first-child) > div > * {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+  }
+
+  &-notes {
+    > div:first-child,
+    div:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-5%);
+    }
+
+    > div:nth-child(3) {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+
+  &-contact {
+    > div:first-child {
+      opacity: 0;
+      transform: translateY(-5%);
+    }
+  }
+}
+
+.entered {
+  &-home {
+    > div:first-child {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+
+    > div:not(:first-child) {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+  }
+
+  &-technologies {
+    > div:first-child {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+
+    > div:not(:first-child) > div > * {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+  }
+
+  &-experience {
+    > div:first-child {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+
+    > div:not(:first-child) > * {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+  }
+
+  &-portfolio {
+    > div:first-child,
+    div:nth-child(2) {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+
+    > div:not(:first-child) > div > * {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+  }
+
+  &-notes {
+    > div:first-child,
+    div:nth-child(2) {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+
+    > div:nth-child(3) {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+  }
+
+  &-contact {
+    > div:first-child {
+      opacity: 1;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+  }
+}
+
+.exiting {
+  &-home {
+    > div:first-child {
+      opacity: 0;
+      transition: transform 350ms, opacity 350ms;
+    }
+
+    > div:not(:first-child) {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+  }
+
+  &-technologies {
+    > div:first-child {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+
+    > div:not(:first-child) > div > * {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+  }
+
+  &-experience {
+    > div:first-child {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+
+    > div:not(:first-child) > * {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+  }
+
+  &-portfolio {
+    > div:first-child,
+    div:nth-child(2) {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+
+    > div:not(:first-child) > div > * {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+  }
+
+  &-notes {
+    > div:first-child,
+    div:nth-child(2) {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+
+    > div:nth-child(3) {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+  }
+
+  &-contact {
+    > div:first-child {
+      transition: opacity 350ms;
+      opacity: 0;
+    }
+  }
+}

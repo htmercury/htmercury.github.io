@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import Item from "./item"
+import React from "react";
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import Item from "./item";
 
-import styles from "../styles/header.module.scss"
-import logoUrl from "../assets/cubicle.svg"
-import { FaGithubAlt, FaLinkedinIn, FaMailBulk } from "react-icons/fa"
+import styles from "../styles/header.module.scss";
+import logoUrl from "../assets/cubicle.svg";
+import { FaGithubAlt, FaLinkedinIn, FaMailBulk } from "react-icons/fa";
 
 class Header extends React.Component {
   render() {
-    const { location, flicker } = this.props
+    const { location, flicker } = this.props;
 
     const routes = [
       { text: "Home", path: "/" },
@@ -18,7 +18,7 @@ class Header extends React.Component {
       { text: "Portfolio", path: "/portfolio/" },
       { text: "Notes", path: "/notes/" },
       { text: "Contact", path: "/contact/" },
-    ]
+    ];
 
     return (
       <header className={styles.sideBar}>
@@ -80,12 +80,12 @@ class Header extends React.Component {
           </div>
         </div>
       </header>
-    )
+    );
   }
 }
 
 Header.propTypes = {
   location: PropTypes.object.isRequired,
-}
+};
 
-export default Header
+export default Header;

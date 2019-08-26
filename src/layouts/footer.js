@@ -1,6 +1,6 @@
-import React from "react"
-import styles from "../styles/footer.module.scss"
-import { FaGithubAlt, FaLinkedinIn, FaMailBulk } from "react-icons/fa"
+import React from "react";
+import styles from "../styles/footer.module.scss";
+import { FaGithubAlt, FaLinkedinIn, FaMailBulk } from "react-icons/fa";
 
 const Footer = () => (
   <footer className={styles.footer}>
@@ -20,7 +20,7 @@ const Footer = () => (
     </div>
     <div>
       © {new Date().getFullYear()}, Site built with
-      {` `}
+      {" "}
       <a href="https://www.gatsbyjs.org" target="_blank">
         Gatsby
       </a>{" "}
@@ -28,6 +28,6 @@ const Footer = () => (
       <span className="sr-only">Link leads to external page.</span>
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

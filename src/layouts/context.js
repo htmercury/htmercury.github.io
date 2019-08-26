@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const defaultContextValue = {
   data: {
@@ -6,19 +6,19 @@ const defaultContextValue = {
     menuOpen: false,
   },
   set: () => {},
-}
+};
 
-const { Provider, Consumer } = React.createContext(defaultContextValue)
+const { Provider, Consumer } = React.createContext(defaultContextValue);
 
 class ContextProviderComponent extends React.Component {
   constructor() {
-    super()
+    super();
 
-    this.setData = this.setData.bind(this)
+    this.setData = this.setData.bind(this);
     this.state = {
       ...defaultContextValue,
       set: this.setData,
-    }
+    };
   }
 
   setData(newData) {
@@ -27,12 +27,12 @@ class ContextProviderComponent extends React.Component {
         ...state.data,
         ...newData,
       },
-    }))
+    }));
   }
 
   render() {
-    return <Provider value={this.state}>{this.props.children}</Provider>
+    return <Provider value={this.state}>{this.props.children}</Provider>;
   }
 }
 
-export { Consumer as default, ContextProviderComponent }
+export { Consumer as default, ContextProviderComponent };

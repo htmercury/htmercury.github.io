@@ -1,7 +1,7 @@
-import React from "react"
-import classnames from "classnames"
-import styles from "../styles/item.module.scss"
-import { Link } from "gatsby"
+import React from "react";
+import classnames from "classnames";
+import styles from "../styles/item.module.scss";
+import { Link } from "gatsby";
 
 const Item = ({ text, path, handler, active, location }) =>
   path ? (
@@ -28,6 +28,6 @@ const Item = ({ text, path, handler, active, location }) =>
         <span className={styles.underline} />
       </span>
     </a>
-  )
+  );
 
-export default Item
+export default Item;
