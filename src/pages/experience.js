@@ -64,7 +64,7 @@ const ExperiencePage = () => (
           </p>
           <hr></hr>
           <h3>
-            Full Stack Developer Trainee
+            Software Engineer Apprentice
             <span>(2018.6 - 2018.9) @ Coding Dojo</span>
           </h3>
           <p>

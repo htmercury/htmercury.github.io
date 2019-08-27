@@ -24,8 +24,8 @@ const IndexPage = () => (
       <span>
         Like my ancestors, I make interactive things on the internet. I attend
         Northwestern as a senior CS student and am currently employed by COVERT
-        NINE as a React Developer Intern. Before COVERT NINE, I was a Full Stack
-        Developer Trainee at Coding Dojo. Before Coding Dojo, I volunteered at
+        NINE as a React Developer Intern. Before COVERT NINE, I was a Software
+        Engineer Apprentice at Coding Dojo. Before Coding Dojo, I volunteered at
         Northwestern's Garage start-up scene. Before that, I was a baby.
         <br />
         <br />
