@@ -72,6 +72,9 @@
   z-index: 4;
 
   > canvas {
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
     width: auto !important;
     position: absolute;
     top: 0;
