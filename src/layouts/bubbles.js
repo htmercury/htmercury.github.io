@@ -1,6 +1,6 @@
-import React from "react"
-import Particles from "react-particles-js"
-import styles from "../styles/layout.module.scss"
+import React from "react";
+import Particles from "react-particles-js";
+import styles from "../styles/layout.module.scss";
 
 const Bubbles = () => (
   <Particles
@@ -109,4 +109,4 @@ const Bubbles = () => (
   />
 );
 
-export default Bubbles
+export default Bubbles;

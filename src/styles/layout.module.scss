@@ -4,6 +4,10 @@
     margin-left: 260px;
     min-height: 100vh;
     padding-bottom: 120px;
+
+    > canvas {
+      margin-left: -260px;
+    }
   }
 }
 
@@ -72,7 +76,6 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
   }
 }
