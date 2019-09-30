@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import Header from "./header";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import Bubbles from "./bubbles";
 import styles from "../styles/layout.module.scss";
 import classnames from "classnames";
 import Transition from "../components/transition";
@@ -52,7 +53,7 @@ class Layout extends React.Component {
         >
           <Transition location={location}>{children}</Transition>
         </main>
-        <div className={styles.wrapper}></div>
+        <Bubbles />
         <Footer />
       </>
     );
