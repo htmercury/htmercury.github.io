@@ -3,6 +3,7 @@ module.exports = {
     title: `Portfolio - htmercury`,
     description: `I am currently employed as a React developer intern and I am always learning new technologies and building new things. As a developer, I strive to create products and solutions that can empower other developers.`,
     author: `@htmercury`,
+    siteUrl: 'https://www.htmercury.me/',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

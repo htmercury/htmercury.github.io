@@ -1,12 +1,12 @@
-import React from "react";
-import classnames from "classnames";
+import React from "react"
+import classnames from "classnames"
 
-import genStyles from "../styles/page.module.scss";
-import styles from "../styles/experience.pages.module.scss";
+import genStyles from "../styles/page.module.scss"
+import styles from "../styles/experience.pages.module.scss"
 
-import SEO from "../components/seo";
-import ProfileImage from "../components/profile-image";
-import { Link } from "gatsby";
+import SEO from "../components/seo"
+import ProfileImage from "../components/profile-image"
+import { Link } from "gatsby"
 
 const ExperiencePage = () => (
   <>
@@ -62,6 +62,10 @@ const ExperiencePage = () => (
             the functionality of the current new editor of WordPress, Gutenberg
             (2018), which is still in its development stages.
           </p>
+          <p>
+            Currently employed here as a part time React Developer since 2019.9
+            while tackling the life of a full time student at Northwestern.
+          </p>
           <hr></hr>
           <h3>
             Software Engineer Apprentice
@@ -101,6 +105,6 @@ const ExperiencePage = () => (
       </div>
     </div>
   </>
-);
+)
 
-export default ExperiencePage;
+export default ExperiencePage
