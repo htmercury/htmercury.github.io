@@ -9,6 +9,7 @@ const Bubbles = () => (
       particles: {
         number: {
           value: 160,
+          limit: 400,
           density: {
             enable: true,
             value_area: 800,
