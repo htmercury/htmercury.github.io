@@ -8,11 +8,12 @@ Personal portfolio site for Ka Wong (htmercury), built with Gatsby v2 and deploy
 
 ## Commands
 
-- **Dev server:** `yarn develop` (or `gatsby develop`) — runs at localhost:8000
-- **Build:** `yarn build` (or `gatsby build`)
-- **Deploy:** `yarn deploy` — builds and pushes `public/` to the `master` branch via gh-pages
-- **Format:** `yarn format` — runs Prettier on `src/**/*.{js,jsx}`
+- **Dev server:** `npm run develop` (or `gatsby develop`) — runs at localhost:8000
+- **Build:** `npm run build` (or `gatsby build`)
+- **Deploy:** `npm run deploy` — builds and pushes `public/` to the `master` branch via gh-pages
+- **Format:** `npm run format` — runs Prettier on `src/**/*.{js,jsx}`
 - **No test suite** — the test script is a placeholder
+- **Requires Node 16** — use `nvm use` (reads `.nvmrc`)
 
 ## Branch Model
 
@@ -29,11 +30,11 @@ Layout wrapping uses `gatsby-plugin-layout`, which auto-wraps all pages with `sr
 
 ### Key directories
 
-- `src/pages/` — route pages (index, technologies, experience, portfolio, notes, contact)
+- `src/pages/` — route pages (index, technologies, experience, portfolio, contact). Notes page exists but is removed from nav.
 - `src/layouts/` — persistent layout shell: `index.js` (root layout), `header.js` (sidebar with nav), `navbar.js` (mobile top bar), `menu.js` (mobile menu overlay), `footer.js`, `bubbles.js` (particle background)
 - `src/components/` — reusable components (SEO, image helpers, transition wrapper)
 - `src/styles/` — SCSS modules per component/page, plus `global.scss` and `colors.scss` (shared color variables and `color()` shade function)
-- `src/assets/` — SVG icons (imported via `gatsby-plugin-svgr` and as URLs)
+- `src/assets/` — SVG icons (imported as data URIs via webpack url-loader; `gatsby-plugin-svgr` is disabled)
 - `src/images/` — raster images processed by `gatsby-plugin-sharp`
 
 ### Styling
@@ -44,7 +45,14 @@ Layout wrapping uses `gatsby-plugin-layout`, which auto-wraps all pages with `sr
 
 ### Particle Background
 
-`src/layouts/bubbles.js` renders `react-particles-js` as a full-page background layer. Particles are disabled on mobile. The particle limit is 400.
+`src/layouts/bubbles.js` renders `react-particles-js` as a full-page background layer. Particles are disabled on mobile. The particle limit is 400. The canvas uses `margin-right: -150px` in `layout.module.scss`; `body` has `overflow-x: hidden` to prevent horizontal scrolling.
+
+### Known Constraints
+
+- **Node 16 required** — Gatsby v2 + sharp don't work on Node 18+. Apple Silicon needs the `sharp` override in package.json (`"overrides": {"sharp": "0.30.7"}`).
+- **`node-sass` replaced with `sass`** (Dart Sass) — install with `--legacy-peer-deps` since `gatsby-plugin-sass@2` still lists `node-sass` as a peer dep.
+- **`gatsby-plugin-svgr` disabled** — the svgr + url-loader chain produces corrupt data URIs (JS code base64-encoded as SVG). All SVG imports use default exports as data URI strings for `<img src>`.
+- **`DEV_SSR: false`** in gatsby-config — Gatsby 2.32 auto-enables DEV_SSR which causes SSR errors with the particle canvas.
 
 ## Code Style
 
