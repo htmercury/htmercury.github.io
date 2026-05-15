@@ -18,17 +18,17 @@ const ContactPage = () => (
       <div className={genStyles.title}>Ways to get in touch.</div>
       <div className={classnames(genStyles.container, styles.contactWrapper)}>
         <div>
-          <a href="mailto:kawong2020@u.northwestern.edu" target="_blank">
+          <a href="mailto:khw9899@alum.northwestern.edu" target="_blank">
             <div>
               <FaMailBulk />
-              kawong2020@u.northwestern.edu
+              khw9899@alum.northwestern.edu
               <span className="sr-only">Link leads to external page.</span>
             </div>
           </a>
-          <a href="https://www.linkedin.com/in/htmercury/" target="_blank">
+          <a href="https://www.linkedin.com/in/khw9899/" target="_blank">
             <div>
               <FaLinkedinIn />
-              linkedin.com/in/htmercury
+              linkedin.com/in/khw9899
               <span className="sr-only">Link leads to external page.</span>
             </div>
           </a>

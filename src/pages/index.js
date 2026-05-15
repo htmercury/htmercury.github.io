@@ -22,26 +22,29 @@ const IndexPage = () => (
     <div className={styles.content}>
       <h1>About</h1>
       <span>
-        Like my ancestors, I make interactive things on the internet. I attend
-        Northwestern as a senior CS student and am currently employed by COVERT
-        NINE as a Part Time React Developer. Before COVERT NINE, I was a Software
-        Engineer Apprentice at Coding Dojo. Before Coding Dojo, I volunteered at
-        Northwestern's Garage start-up scene. Before that, I was a baby.
+        I’m a full-stack engineer with 5+ years of experience building
+        healthcare platforms at Publicis Sapient. I’ve worked across web and
+        mobile for clients including Humana/CenterWell, Optum, and Mayo
+        Clinic — building patient portals, search systems handling millions
+        of requests, and micro-frontend architectures.
         <br />
         <br />
-        I like to design things, and then I like to build those things.
+        My core stack is TypeScript, React, and Next.js. I care about
+        accessibility, performance, and shipping things that work well for
+        real people.
         <br />
-        <br />I occasionally take on freelance projects. I'm always looking for
-        new initiatives. Feel free to get in touch if you have an interesting
-        project that you want to collaborate on. Or if you just want to say{" "}
+        <br />
+        I’m always open to new opportunities and interesting projects. Feel
+        free to get in touch if you’d like to collaborate or just want to
+        say{" "}
         <a
-          href="mailto:kawong2020@u.northwestern.edu?subject=hi"
+          href="mailto:khw9899@alum.northwestern.edu?subject=hi"
           target="_blank"
         >
           hello <FaExternalLinkAlt />
           <span className="sr-only">Link leads to external page.</span>
         </a>
-        , that’s cool too.
+        .
       </span>
       <div className={styles.exploreContent}>
         <div>

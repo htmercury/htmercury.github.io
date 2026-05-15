@@ -7,21 +7,14 @@ import styles from "../styles/technologies.page.module.scss";
 import { Link } from "gatsby";
 import { FaArrowRight } from "react-icons/fa";
 
-// 1
 import babelUrl from "../assets/babel.svg";
 import webpackUrl from "../assets/webpack.svg";
 import nodeUrl from "../assets/node.svg";
 import yarnUrl from "../assets/yarn.svg";
 import npmUrl from "../assets/npm.svg";
-// 2
 import reactUrl from "../assets/react.svg";
-// 3
 import htmlUrl from "../assets/html5.svg";
 import cssUrl from "../assets/css3.svg";
-// 4
-import gatsbyUrl from "../assets/gatsby.svg";
-// 5
-import netcoreUrl from "../assets/NET_Core.svg";
 
 import SEO from "../components/seo";
 
@@ -43,15 +36,13 @@ const TechnologiesPage = () => (
           </div>
           <div>
             <div className={styles.techContent}>
-              <h3>Javascript.</h3>
+              <h3>TypeScript & JavaScript.</h3>
               <p>
-                I have a vast amount of experience using Javascript, building
-                websites, mobile apps, and games. I have worked with ECMA Script
-                (ES) 2015 since I started college and transitioned to using ES6
-                and ES7 daily, and have professional experience with modern
-                tooling such as Node, Webpack, Babel, and the package managers
-                npm and yarn. I have worked in TDD environments and have used
-                the testing framework Jasmine.
+                TypeScript is my primary language across all professional
+                projects. I also work with Python and SQL. My daily tooling
+                includes Vite, webpack, Nx, and Node.js. On the testing
+                side, I use Vitest and React Testing Library, with prior
+                experience in Jest.
               </p>
             </div>
           </div>
@@ -65,16 +56,14 @@ const TechnologiesPage = () => (
           </div>
           <div>
             <div className={styles.techContent}>
-              <h3>React.</h3>
+              <h3>React & Next.js.</h3>
               <p>
-                I have 3 years experience with React, building websites,
-                applications, and component libraries. I also have used a
-                similar framework React Native to build mobile apps. I started
-                using React professionally since last year, and have been
-                exposed to using both Redux and a bit of Apollo which uses
-                graphQL for client side state management. I also have
-                professional experience with other packages that aid React
-                development including React Router and Styled Components.
+                7+ years with React across web and mobile (React Native).
+                I build with Next.js for SSR/SSG, and have deep experience
+                with Redux, Zustand, TanStack Query, and Apollo GraphQL for
+                state management. I've built micro-frontend architectures
+                using Webpack Module Federation with independently deployed,
+                shared-runtime modules.
               </p>
             </div>
           </div>
@@ -96,16 +85,13 @@ const TechnologiesPage = () => (
           </div>
           <div>
             <div className={styles.techContent}>
-              <h3>HTML & CSS.</h3>
+              <h3>Accessibility & Performance.</h3>
               <p>
-                I have worked with HTML and CSS over 4 years starting a year
-                just before college, producing responsive markup and styles with
-                a focus on accessiblity and performance. I have come to learn
-                more about web accessiblity standards in UI as well additions to
-                markup to allow for more functionality to devices such as screen
-                readers. I have a good amount of knowledge of the CSS spec and
-                have worked with flexbox and grid. I have also used both
-                pre-processors SASS and Less.
+                WCAG 2.1 AA compliance across projects using semantic HTML,
+                ARIA patterns, and VoiceOver testing. Improved Core Web
+                Vitals by analyzing bundles with visualizer tools to identify
+                tree-shaking opportunities and lazy-loadable modules. I also
+                work with Tailwind CSS and design tokens via Style Dictionary.
               </p>
             </div>
           </div>
@@ -114,17 +100,20 @@ const TechnologiesPage = () => (
           <div>
             <img
               className={styles.genWrapper}
-              src={gatsbyUrl}
-              alt="gatsby"
+              src={nodeUrl}
+              alt="node"
             ></img>
           </div>
           <div>
             <div className={styles.techContent}>
-              <h3>JAMstack.</h3>
+              <h3>Backend & Infrastructure.</h3>
               <p>
-                I have some experience of creating headless front-ends, and
-                working with the JAMstack. This website is built with Gatsby, a
-                static site framework based on React.
+                Server-side rendering, BFF architecture, and REST API
+                development with Node.js and Express. OAuth 2.0 flows
+                (PKCE and client credentials), PostgreSQL, MongoDB, and
+                Docker. CI/CD with GitHub Actions and Azure DevOps —
+                including a Jenkins-to-GitHub Actions migration that
+                reduced build times from 58 seconds to 3 seconds.
               </p>
             </div>
           </div>
@@ -134,24 +123,19 @@ const TechnologiesPage = () => (
         <div className={classnames(genStyles.container, styles.tech)}>
           <div>
             <img
-              className={styles.coreWrapper}
-              src={netcoreUrl}
-              alt="netcore"
+              className={styles.genWrapper}
+              src={reactUrl}
+              alt="react native"
             ></img>
           </div>
           <div>
             <div className={styles.techContent}>
-              <h3>C# Net Core.</h3>
+              <h3>Mobile.</h3>
               <p>
-                I have used C# Net Core extensively as a backend for my
-                projects. I first learned about Net Core as a Full Stack
-                Developer Trainee as Coding Dojo. I have mainly used Net Core in
-                conjunction with SQL databases such as PostgreSQL and Azure SQL
-                to create backend APIs for websites and mobile apps. I have
-                experience using LINQ, Dapper, and the Entity Framework to query
-                and model data. In addition, I have deployed full stack apps
-                using the Azure cloud service with a custom build pipelines
-                using Azure devOps.
+                React Native for cross-platform mobile development. Built a
+                patient-facing mobile portal and extended an in-house
+                analytics platform to mobile, providing first-time
+                visibility into mobile user journeys.
               </p>
             </div>
           </div>

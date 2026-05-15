@@ -1,7 +1,10 @@
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
   siteMetadata: {
-    title: `Portfolio - htmercury`,
-    description: `I am currently employed as a React developer intern and I am always learning new technologies and building new things. As a developer, I strive to create products and solutions that can empower other developers.`,
+    title: `Ka Wong — Software Engineer`,
+    description: `Full-stack engineer with 5+ years of experience building healthcare platforms at scale. Specializing in React, TypeScript, and Next.js.`,
     author: `@htmercury`,
     siteUrl: 'https://www.htmercury.me/',
   },
@@ -29,7 +32,7 @@ module.exports = {
         icon: `src/assets/cubicle.svg`, // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-svgr",
+    // "gatsby-plugin-svgr", // disabled — all SVGs used as img src, not React components
     {
       resolve: `gatsby-plugin-typography`,
       options: {

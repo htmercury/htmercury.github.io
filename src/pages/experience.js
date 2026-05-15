@@ -26,26 +26,16 @@ const ExperiencePage = () => (
             <p>Ka Wong</p>
           </div>
           <div className={styles.profileInfo}>
-            <p>Age</p>
-            <p>21</p>
-          </div>
-          <div className={styles.profileInfo}>
-            <p>Residence</p>
+            <p>Location</p>
             <p>Chicago, Illinois</p>
           </div>
           <div className={styles.profileInfo}>
-            <p>Hobbies</p>
-            <div>
-              <p>Reading books</p>
-              <p>Eating spicy stuff</p>
-            </div>
+            <p>Education</p>
+            <p>B.S. Computer Science, Northwestern University</p>
           </div>
           <div className={styles.profileInfo}>
-            <p>Thoughts</p>
-            <p>
-              Code always does what you tell it to do, but you don't always tell
-              it what you want it to do.
-            </p>
+            <p>Focus</p>
+            <p>Frontend &amp; Full-Stack Engineering</p>
           </div>
         </div>
       </div>
@@ -53,54 +43,46 @@ const ExperiencePage = () => (
         <h3 className={styles.title}>Career.</h3>
         <div className={styles.career}>
           <h3>
-            React Developer Intern
-            <span>(2019.6 - Present) @ COVERT NINE</span>
+            Associate Software Engineer (Junior &rarr; L1 &rarr; L2)
+            <span>(Oct 2020 - Present) @ Publicis Sapient</span>
           </h3>
           <p>
-            Responsible for maintaining and development of new features to an
-            open sourced components plugin using React.js + Redux that extends
-            the functionality of the current new editor of WordPress, Gutenberg
-            (2018), which is still in its development stages.
+            Building healthcare platforms at scale across web and mobile for
+            Humana/CenterWell, Optum, and Mayo Clinic.
           </p>
           <p>
-            Currently employed here as a part time React Developer since 2019.9
-            while tackling the life of a full time student at Northwestern.
+            Key work includes building Humana and CenterWell's guest scheduling
+            experience, module-federated search micro-frontends handling 2M
+            requests/month, a patient portal securing access for ~1.3M patients
+            across 50 states and 130 countries, and a CI/CD migration that cut
+            build times from 58 seconds to 3 seconds.
           </p>
           <hr></hr>
           <h3>
-            Software Engineer Apprentice
-            <span>(2018.6 - 2018.9) @ Coding Dojo</span>
+            React Developer (Intern &rarr; Full Time)
+            <span>(Jun 2019 - Oct 2020) @ COVERT NINE</span>
           </h3>
           <p>
-            Received on-hands training for using various technologies including:
-            Django, Flask, Node using Express, C# Net Core, mySQL, MongoDB, and
-            Angular to create full stack applications. Gained valuable
-            experience in web architectural patterns especially about REST, MVC,
-            and also familiarity working with HTTP methods. In addition,
-            obtained exposure deploying web applications using AWS or Azure.
+            Led development of c9-blocks, an open-source React/Redux plugin
+            extending WordPress's Gutenberg editor. Grew the plugin to ~300
+            active installations, adopted by brands including Riot Fest,
+            Aloha Poke Co., and WowBao.
           </p>
-          <p>
-            Also, in private, he learns React, Redux, GraphQL, and other
-            technologies.
-          </p>
-          <div>
-            <span>(Various twists and turns)</span>
-          </div>
+          <hr></hr>
           <h3>
-            High school student
-            <span>(2012)</span>
+            B.S. in Computer Science
+            <span>(Sep 2016 - Jun 2020) @ Northwestern University</span>
           </h3>
           <p>
-            For some reason, he chances upon Minecraft mod development and wakes
-            up to the fun of programming. I am determined to make this a
-            lifelong job.
+            Graduated with a 3.75 cumulative GPA from Northwestern University
+            in Evanston, Illinois.
           </p>
         </div>
         <Link
           to="/portfolio/"
           className={classnames(genStyles.link, styles.seeWork)}
         >
-          Click here to see my work!
+          See my work
         </Link>
       </div>
     </div>
