@@ -24,6 +24,26 @@
   }
 }
 
+.portfolio-item {
+  border-top: 4px solid transparent;
+
+  &.accent-humana {
+    border-top-color: #4ca750;
+  }
+  &.accent-optum {
+    border-top-color: #e87722;
+  }
+  &.accent-mayo {
+    border-top-color: #0057b8;
+  }
+  &.accent-cicd {
+    border-top-color: #8b5cf6;
+  }
+  &.accent-c9 {
+    border-top-color: #e85e00;
+  }
+}
+
 .portfolio-desc {
   > h3 > span {
     display: inline-block;

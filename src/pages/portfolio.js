@@ -15,7 +15,7 @@ const PortfolioPage = () => (
     <div className={genStyles.subtitle}>Professional Projects</div>
     <div className={styles.portfolioGrid}>
       <div>
-        <div className={classnames(genStyles.container, styles.portfolioItem)}>
+        <div className={classnames(genStyles.container, styles.portfolioItem, styles.accentHumana)}>
           <div className={styles.portfolioDesc}>
             <h3 className={genStyles.subtitle}>
               <span>Humana / CenterWell — Guest Scheduling</span>
@@ -33,7 +33,7 @@ const PortfolioPage = () => (
             </div>
           </div>
         </div>
-        <div className={classnames(genStyles.container, styles.portfolioItem)}>
+        <div className={classnames(genStyles.container, styles.portfolioItem, styles.accentOptum)}>
           <div className={styles.portfolioDesc}>
             <h3 className={genStyles.subtitle}>
               <span>Optum — Site-Wide Search & Design System</span>
@@ -57,7 +57,7 @@ const PortfolioPage = () => (
         </div>
       </div>
       <div>
-        <div className={classnames(genStyles.container, styles.portfolioItem)}>
+        <div className={classnames(genStyles.container, styles.portfolioItem, styles.accentMayo)}>
           <div className={styles.portfolioDesc}>
             <h3 className={genStyles.subtitle}>
               <span>Mayo Clinic — Patient Portal</span>
@@ -77,7 +77,7 @@ const PortfolioPage = () => (
             </div>
           </div>
         </div>
-        <div className={classnames(genStyles.container, styles.portfolioItem)}>
+        <div className={classnames(genStyles.container, styles.portfolioItem, styles.accentCicd)}>
           <div className={styles.portfolioDesc}>
             <h3 className={genStyles.subtitle}>
               <span>Optum — CI/CD Migration & Mobile Analytics</span>
@@ -101,7 +101,7 @@ const PortfolioPage = () => (
     <div className={genStyles.subtitle} style={{ marginTop: "2rem" }}>Open Source</div>
     <div className={styles.portfolioGrid}>
       <div>
-        <div className={classnames(genStyles.container, styles.portfolioItem)}>
+        <div className={classnames(genStyles.container, styles.portfolioItem, styles.accentC9)}>
           <div className={styles.portfolioDesc}>
             <h3 className={genStyles.subtitle}>
               <span>c9-blocks</span>
