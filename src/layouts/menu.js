@@ -8,7 +8,6 @@ const routes = [
   { text: "Technologies", path: "/technologies/" },
   { text: "Experience", path: "/experience/" },
   { text: "Portfolio", path: "/portfolio/" },
-  { text: "Notes", path: "/notes/" },
 ];
 
 const Menu = ({ hide, location, close }) => (

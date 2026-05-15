@@ -16,7 +16,6 @@ class Header extends React.Component {
       { text: "Technologies", path: "/technologies/" },
       { text: "Experience", path: "/experience/" },
       { text: "Portfolio", path: "/portfolio/" },
-      { text: "Notes", path: "/notes/" },
       { text: "Contact", path: "/contact/" },
     ];
 
