@@ -31,7 +31,7 @@ class Header extends React.Component {
             KW
           </Link>
           <p>Software Engineer</p>
-          <p>Full-Stack Developer</p>
+          <p>Frontend / Full-Stack</p>
           <p>Chicago, IL</p>
         </div>
         <div className={styles.navWrapper}>
